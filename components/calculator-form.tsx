@@ -39,13 +39,13 @@ export function CalculatorForm({
   };
 
   return (
-    <Card className="p-8 bg-card border border-border">
-      <form onSubmit={handleSubmit} className="space-y-6" role="form" aria-label="Calculator form">
+    <Card className="p-4 md:p-8 bg-card border border-border w-full">
+      <form onSubmit={handleSubmit} className="space-y-4 md:space-y-6" role="form" aria-label="Calculator form">
         {fields.map((field) => (
           <div key={field.name} className="space-y-2">
             <label 
               htmlFor={field.name}
-              className="block text-sm font-semibold text-foreground"
+              className="block text-xs md:text-sm font-semibold text-foreground"
             >
               {field.label}
               {field.required && (
@@ -61,7 +61,7 @@ export function CalculatorForm({
                 onChange={(e) => onFieldChange(field.name, e.target.value)}
                 aria-label={field.label}
                 required={field.required}
-                className="w-full px-4 py-2 rounded-lg border border-input bg-background text-foreground focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent"
+                className="w-full px-3 md:px-4 py-2 text-sm md:text-base rounded-lg border border-input bg-background text-foreground focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent"
               >
                 <option value="">{field.placeholder || 'Select an option'}</option>
                 {field.options?.map((opt) => (
@@ -86,18 +86,18 @@ export function CalculatorForm({
                 min={field.min}
                 step={field.step}
                 required={field.required}
-                className="w-full px-4 py-2 rounded-lg border border-input bg-background text-foreground focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent"
+                className="w-full px-3 md:px-4 py-2 text-sm md:text-base rounded-lg border border-input bg-background text-foreground focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent"
               />
             )}
           </div>
         ))}
 
-        <div className="flex gap-4 pt-4">
+        <div className="flex flex-col sm:flex-row gap-2 md:gap-4 pt-2 md:pt-4">
           <button
             type="submit"
             disabled={loading}
             aria-busy={loading}
-            className="flex-1 px-6 py-3 bg-primary text-primary-foreground font-semibold rounded-lg hover:opacity-90 transition-opacity disabled:opacity-50"
+            className="flex-1 px-4 md:px-6 py-2 md:py-3 text-sm md:text-base bg-primary text-primary-foreground font-semibold rounded-lg hover:opacity-90 transition-opacity disabled:opacity-50"
           >
             {loading ? 'Calculating...' : buttonLabel}
           </button>
@@ -105,7 +105,7 @@ export function CalculatorForm({
             type="button"
             onClick={onClear}
             aria-label="Clear all form fields"
-            className="flex-1 px-6 py-3 bg-accent text-accent-foreground font-semibold rounded-lg hover:opacity-90 transition-opacity"
+            className="flex-1 px-4 md:px-6 py-2 md:py-3 text-sm md:text-base bg-accent text-accent-foreground font-semibold rounded-lg hover:opacity-90 transition-opacity"
           >
             Clear Fields
           </button>

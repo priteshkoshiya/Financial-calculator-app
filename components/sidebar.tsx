@@ -26,11 +26,11 @@ export function Sidebar() {
   const pathname = usePathname();
 
   return (
-    <aside className="fixed left-0 top-0 z-40 h-screen w-64 overflow-y-auto border-r border-border bg-sidebar" aria-label="Main navigation">
-      <div className="p-6">
+    <aside className="h-screen w-64 overflow-y-auto border-r border-border bg-sidebar flex flex-col" aria-label="Main navigation">
+      <div className="p-4 md:p-6">
         <Link href="/" className="flex items-center gap-2 font-bold text-lg text-primary hover:opacity-80 transition-opacity" aria-label="InvestCalc - Home">
           <span className="text-2xl" aria-hidden="true">📊</span>
-          <span>InvestCalc</span>
+          <span className="hidden sm:inline">InvestCalc</span>
         </Link>
       </div>
 
@@ -120,8 +120,8 @@ export function Sidebar() {
         </Link>
       </nav>
 
-      <div className="p-4 text-xs text-sidebar-foreground/50 border-t border-sidebar-border mt-8">
-        <p>© 2026 InvestCalc. All rights reserved.</p>
+      <div className="mt-auto p-3 md:p-4 text-xs text-sidebar-foreground/50 border-t border-sidebar-border">
+        <p>© 2026 InvestCalc</p>
       </div>
     </aside>
   );

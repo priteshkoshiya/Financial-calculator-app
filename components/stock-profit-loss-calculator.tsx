@@ -134,7 +134,7 @@ export function StockProfitLossCalculator() {
   return (
     <>
       {/* Calculator */}
-      <div className="grid lg:grid-cols-2 gap-8">
+      <div className="grid grid-cols-1 lg:grid-cols-2 gap-4 md:gap-8">
         <CalculatorForm
           fields={fields}
           onSubmit={handleSubmit}
@@ -153,26 +153,26 @@ export function StockProfitLossCalculator() {
       </div>
 
       {/* How It Works */}
-      <div className="bg-secondary/10 p-8 rounded-2xl border border-secondary/20">
-        <h2 className="text-2xl font-bold text-foreground mb-6">How It Works</h2>
-        <ol className="space-y-4 text-foreground">
-          <li className="flex gap-4">
+      <div className="bg-secondary/10 p-4 md:p-8 rounded-2xl border border-secondary/20">
+        <h2 className="text-xl md:text-2xl font-bold text-foreground mb-4 md:mb-6">How It Works</h2>
+        <ol className="space-y-3 md:space-y-4 text-foreground text-sm md:text-base">
+          <li className="flex gap-3 md:gap-4">
             <span className="text-primary font-bold flex-shrink-0">1.</span>
             <span>Enter the number of stocks you currently own</span>
           </li>
-          <li className="flex gap-4">
+          <li className="flex gap-3 md:gap-4">
             <span className="text-primary font-bold flex-shrink-0">2.</span>
             <span>Enter the buying price per stock</span>
           </li>
-          <li className="flex gap-4">
+          <li className="flex gap-3 md:gap-4">
             <span className="text-primary font-bold flex-shrink-0">3.</span>
             <span>Enter the selling price per stock</span>
           </li>
-          <li className="flex gap-4">
+          <li className="flex gap-3 md:gap-4">
             <span className="text-primary font-bold flex-shrink-0">4.</span>
             <span>Enter the number of stocks you want to sell</span>
           </li>
-          <li className="flex gap-4">
+          <li className="flex gap-3 md:gap-4">
             <span className="text-primary font-bold flex-shrink-0">5.</span>
             <span>Click "Calculate" to see your profit/loss results</span>
           </li>
@@ -180,16 +180,16 @@ export function StockProfitLossCalculator() {
       </div>
 
       {/* Educational Content */}
-      <div className="space-y-6">
-        <h2 className="text-2xl font-bold text-foreground">
+      <div className="space-y-4 md:space-y-6">
+        <h2 className="text-xl md:text-2xl font-bold text-foreground">
           Understanding Stock Profit and Loss
         </h2>
-        <p className="text-muted-foreground leading-relaxed">
+        <p className="text-sm md:text-base text-muted-foreground leading-relaxed">
           Stock profit or loss is calculated based on the difference between your selling price and buying price, multiplied by the number of shares sold. A positive result indicates a profit, while a negative result indicates a loss.
         </p>
-        <div className="bg-primary/5 p-6 rounded-lg border border-primary/20">
-          <h3 className="font-semibold text-foreground mb-3">Formula</h3>
-          <code className="text-sm text-muted-foreground">
+        <div className="bg-primary/5 p-4 md:p-6 rounded-lg border border-primary/20">
+          <h3 className="font-semibold text-foreground mb-2 md:mb-3 text-sm md:text-base">Formula</h3>
+          <code className="text-xs md:text-sm text-muted-foreground block overflow-x-auto">
             Profit/Loss = (Sell Price - Buy Price) × Quantity Sold
           </code>
         </div>
