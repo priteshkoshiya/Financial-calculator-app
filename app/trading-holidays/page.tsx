@@ -6,24 +6,40 @@ export const metadata = {
   description: 'Complete list of stock market trading holidays for 2026. Plan your trades accordingly.',
 };
 
-const holidays2026 = [
-  { date: '26 January', occasion: 'Republic Day', market: 'NSE, BSE' },
-  { date: '10 March', occasion: 'Maha Shivaratri', market: 'NSE, BSE' },
-  { date: '29 March', occasion: 'Holi', market: 'NSE, BSE' },
-  { date: '2 April', occasion: 'Good Friday', market: 'NSE, BSE' },
-  { date: '14 April', occasion: 'Dr. B.R. Ambedkar Jayanti', market: 'NSE, BSE' },
-  { date: '21 April', occasion: 'Ram Navami', market: 'NSE, BSE' },
-  { date: '17 August', occasion: 'Independence Day', market: 'NSE, BSE' },
-  { date: '15 September', occasion: 'Milad-Ul-Noor', market: 'NSE, BSE' },
-  { date: '2 October', occasion: 'Gandhi Jayanti', market: 'NSE, BSE' },
-  { date: '19 October', occasion: 'Dussehra', market: 'NSE, BSE' },
-  { date: '30 October', occasion: 'Diwali', market: 'NSE, BSE' },
-  { date: '1 November', occasion: 'Diwali (Day 2)', market: 'NSE, BSE' },
-  { date: '25 December', occasion: 'Christmas', market: 'NSE, BSE' },
+const indianHolidays2026 = [
+  { date: 'Mon, Jan 26, 2026', occasion: 'Republic Day', market: 'NSE, BSE' },
+  { date: 'Tue, Mar 03, 2026', occasion: 'Holi', market: 'NSE, BSE' },
+  { date: 'Thu, Mar 26, 2026', occasion: 'Shri Rama Navami', market: 'NSE, BSE' },
+  { date: 'Tue, Mar 31, 2026', occasion: 'Shri Mahavir Jayanti', market: 'NSE, BSE' },
+  { date: 'Fri, Apr 03, 2026', occasion: 'Good Friday', market: 'NSE, BSE' },
+  { date: 'Tue, Apr 14, 2026', occasion: 'Dr. Baba Saheb Ambedkar Jayanti', market: 'NSE, BSE' },
+  { date: 'Fri, May 01, 2026', occasion: 'Maharashtra Day', market: 'NSE, BSE' },
+  { date: 'Thu, May 28, 2026', occasion: 'Bakri Id', market: 'NSE, BSE' },
+  { date: 'Fri, Jun 26, 2026', occasion: 'Muharram', market: 'NSE, BSE' },
+  { date: 'Mon, Sep 14, 2026', occasion: 'Ganesh Chaturthi', market: 'NSE, BSE' },
+  { date: 'Fri, Oct 02, 2026', occasion: 'Mahatma Gandhi Jayanti', market: 'NSE, BSE' },
+  { date: 'Tue, Oct 20, 2026', occasion: 'Dussehra', market: 'NSE, BSE' },
+  { date: 'Tue, Nov 10, 2026', occasion: 'Diwali - Balipratipada', market: 'NSE, BSE' },
+  { date: 'Tue, Nov 24, 2026', occasion: 'Prakash Gurpurb - Sri Guru Nanak Dev', market: 'NSE, BSE' },
+  { date: 'Fri, Dec 25, 2026', occasion: 'Christmas', market: 'NSE, BSE' },
 ];
 
-const halfDays2026 = [
-  { date: '31 December', occasion: 'New Year\'s Eve (Half Day)', market: 'NSE, BSE' },
+const usNasdaqHolidays2026 = [
+  { date: 'Thu, Jan 01, 2026', occasion: 'New Year\'s Day', market: 'Nasdaq, NYSE' },
+  { date: 'Mon, Jan 19, 2026', occasion: 'MLK, Jr. Day', market: 'Nasdaq, NYSE' },
+  { date: 'Mon, Feb 16, 2026', occasion: 'Presidents Day', market: 'Nasdaq, NYSE' },
+  { date: 'Fri, Apr 03, 2026', occasion: 'Good Friday', market: 'Nasdaq, NYSE' },
+  { date: 'Mon, May 25, 2026', occasion: 'Memorial Day', market: 'Nasdaq, NYSE' },
+  { date: 'Fri, Jun 19, 2026', occasion: 'Juneteenth', market: 'Nasdaq, NYSE' },
+  { date: 'Fri, Jul 03, 2026', occasion: 'Independence Day (Observed)', market: 'Nasdaq, NYSE' },
+  { date: 'Mon, Sep 07, 2026', occasion: 'Labor Day', market: 'Nasdaq, NYSE' },
+  { date: 'Thu, Nov 26, 2026', occasion: 'Thanksgiving Day', market: 'Nasdaq, NYSE' },
+  { date: 'Fri, Dec 25, 2026', occasion: 'Christmas Day', market: 'Nasdaq, NYSE' },
+];
+
+const earlyClosures2026 = [
+  { date: 'Fri, Nov 27, 2026', occasion: 'Day After Thanksgiving (Early Close 1:00 PM)', market: 'Nasdaq, NYSE' },
+  { date: 'Thu, Dec 24, 2026', occasion: 'Christmas Eve (Early Close 1:00 PM)', market: 'Nasdaq, NYSE' },
 ];
 
 export default function TradingHolidaysPage() {
@@ -48,27 +64,29 @@ export default function TradingHolidaysPage() {
           </Card>
 
           <Card className="p-8 bg-card border border-border">
-            <h2 className="text-2xl font-bold text-foreground mb-6">Full Market Closure Holidays</h2>
+            <h2 className="text-2xl font-bold text-foreground mb-6">🇮🇳 Indian Market Holidays (NSE, BSE)</h2>
             <div className="overflow-x-auto">
-              <table className="w-full">
+              <table className="w-full text-sm" role="table">
                 <thead>
                   <tr className="border-b border-border">
+                    <th className="text-left py-3 px-4 font-semibold text-foreground">#</th>
                     <th className="text-left py-3 px-4 font-semibold text-foreground">Date</th>
                     <th className="text-left py-3 px-4 font-semibold text-foreground">Occasion</th>
                     <th className="text-left py-3 px-4 font-semibold text-foreground">Exchanges</th>
                   </tr>
                 </thead>
                 <tbody>
-                  {holidays2026.map((holiday, idx) => (
+                  {indianHolidays2026.map((holiday, idx) => (
                     <tr
                       key={idx}
                       className={`border-b border-border/50 ${
                         idx % 2 === 0 ? 'bg-secondary/5' : ''
                       }`}
                     >
+                      <td className="py-3 px-4 text-foreground font-medium">{idx + 1}</td>
                       <td className="py-3 px-4 text-foreground font-medium">{holiday.date}</td>
                       <td className="py-3 px-4 text-muted-foreground">{holiday.occasion}</td>
-                      <td className="py-3 px-4 text-muted-foreground">{holiday.market}</td>
+                      <td className="py-3 px-4 text-muted-foreground text-xs">{holiday.market}</td>
                     </tr>
                   ))}
                 </tbody>
@@ -77,22 +95,55 @@ export default function TradingHolidaysPage() {
           </Card>
 
           <Card className="p-8 bg-card border border-border">
-            <h2 className="text-2xl font-bold text-foreground mb-6">Half Day Market Closure</h2>
+            <h2 className="text-2xl font-bold text-foreground mb-6">🇺🇸 USA Market Holidays (Nasdaq, NYSE)</h2>
             <div className="overflow-x-auto">
-              <table className="w-full">
+              <table className="w-full text-sm" role="table">
                 <thead>
                   <tr className="border-b border-border">
+                    <th className="text-left py-3 px-4 font-semibold text-foreground">#</th>
                     <th className="text-left py-3 px-4 font-semibold text-foreground">Date</th>
-                    <th className="text-left py-3 px-4 font-semibold text-foreground">Occasion</th>
-                    <th className="text-left py-3 px-4 font-semibold text-foreground">Exchanges</th>
+                    <th className="text-left py-3 px-4 font-semibold text-foreground">Holiday Name</th>
+                    <th className="text-left py-3 px-4 font-semibold text-foreground">Status</th>
                   </tr>
                 </thead>
                 <tbody>
-                  {halfDays2026.map((day, idx) => (
-                    <tr key={idx} className="border-b border-border/50">
+                  {usNasdaqHolidays2026.map((holiday, idx) => (
+                    <tr
+                      key={idx}
+                      className={`border-b border-border/50 ${
+                        idx % 2 === 0 ? 'bg-secondary/5' : ''
+                      }`}
+                    >
+                      <td className="py-3 px-4 text-foreground font-medium">{idx + 1}</td>
+                      <td className="py-3 px-4 text-foreground font-medium">{holiday.date}</td>
+                      <td className="py-3 px-4 text-muted-foreground">{holiday.occasion}</td>
+                      <td className="py-3 px-4 text-xs text-primary font-semibold">Closed</td>
+                    </tr>
+                  ))}
+                </tbody>
+              </table>
+            </div>
+          </Card>
+
+          <Card className="p-8 bg-yellow-500/10 border border-yellow-500/20">
+            <h2 className="text-2xl font-bold text-foreground mb-6">⏰ USA Market Early Closures</h2>
+            <div className="overflow-x-auto">
+              <table className="w-full text-sm" role="table">
+                <thead>
+                  <tr className="border-b border-yellow-500/30">
+                    <th className="text-left py-3 px-4 font-semibold text-foreground">#</th>
+                    <th className="text-left py-3 px-4 font-semibold text-foreground">Date</th>
+                    <th className="text-left py-3 px-4 font-semibold text-foreground">Occasion</th>
+                    <th className="text-left py-3 px-4 font-semibold text-foreground">Close Time</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  {earlyClosures2026.map((day, idx) => (
+                    <tr key={idx} className="border-b border-yellow-500/20">
+                      <td className="py-3 px-4 text-foreground font-medium">{idx + 1}</td>
                       <td className="py-3 px-4 text-foreground font-medium">{day.date}</td>
                       <td className="py-3 px-4 text-muted-foreground">{day.occasion}</td>
-                      <td className="py-3 px-4 text-muted-foreground">{day.market}</td>
+                      <td className="py-3 px-4 text-xs font-semibold text-yellow-600">1:00 PM ET</td>
                     </tr>
                   ))}
                 </tbody>
@@ -102,33 +153,53 @@ export default function TradingHolidaysPage() {
 
           <div className="grid md:grid-cols-2 gap-6">
             <Card className="p-6 bg-secondary/10 border border-secondary/20">
-              <h3 className="font-bold text-foreground mb-3">📊 NSE (National Stock Exchange)</h3>
+              <h3 className="font-bold text-foreground mb-3">🇮🇳 Indian Exchanges</h3>
               <p className="text-muted-foreground text-sm mb-4">
-                India's primary stock exchange. Follows the trading holiday calendar above.
+                Both NSE (National Stock Exchange) and BSE (Bombay Stock Exchange) follow the same holiday calendar for Indian markets.
               </p>
-              <a
-                href="https://www.nseindia.com"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="text-primary font-semibold hover:opacity-80 transition-opacity text-sm"
-              >
-                Visit NSE Website →
-              </a>
+              <div className="space-y-2">
+                <a
+                  href="https://www.nseindia.com"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="block text-primary font-semibold hover:opacity-80 transition-opacity text-sm"
+                >
+                  NSE Official Website →
+                </a>
+                <a
+                  href="https://www.bseindia.com"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="block text-primary font-semibold hover:opacity-80 transition-opacity text-sm"
+                >
+                  BSE Official Website →
+                </a>
+              </div>
             </Card>
 
             <Card className="p-6 bg-secondary/10 border border-secondary/20">
-              <h3 className="font-bold text-foreground mb-3">📊 BSE (Bombay Stock Exchange)</h3>
+              <h3 className="font-bold text-foreground mb-3">🇺🇸 US Exchanges</h3>
               <p className="text-muted-foreground text-sm mb-4">
-                India's oldest stock exchange. Follows a similar trading holiday calendar.
+                Nasdaq and NYSE follow the US Federal holiday calendar. Check exchange websites for early closure updates.
               </p>
-              <a
-                href="https://www.bseindia.com"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="text-primary font-semibold hover:opacity-80 transition-opacity text-sm"
-              >
-                Visit BSE Website →
-              </a>
+              <div className="space-y-2">
+                <a
+                  href="https://www.nasdaq.com"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="block text-primary font-semibold hover:opacity-80 transition-opacity text-sm"
+                >
+                  Nasdaq Official Website →
+                </a>
+                <a
+                  href="https://www.nyse.com"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="block text-primary font-semibold hover:opacity-80 transition-opacity text-sm"
+                >
+                  NYSE Official Website →
+                </a>
+              </div>
             </Card>
           </div>
 

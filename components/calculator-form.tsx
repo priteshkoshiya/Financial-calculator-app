@@ -40,20 +40,30 @@ export function CalculatorForm({
 
   return (
     <Card className="p-8 bg-card border border-border">
-      <form onSubmit={handleSubmit} className="space-y-6">
+      <form onSubmit={handleSubmit} className="space-y-6" role="form" aria-label="Calculator form">
         {fields.map((field) => (
-          <div key={field.name}>
-            <label className="block text-sm font-semibold text-foreground mb-2">
+          <div key={field.name} className="space-y-2">
+            <label 
+              htmlFor={field.name}
+              className="block text-sm font-semibold text-foreground"
+            >
               {field.label}
-              {field.required && <span className="text-destructive">*</span>}
+              {field.required && (
+                <span className="text-destructive" aria-label="required">
+                  {' '}*
+                </span>
+              )}
             </label>
             {field.type === 'select' ? (
               <select
+                id={field.name}
                 value={field.value}
                 onChange={(e) => onFieldChange(field.name, e.target.value)}
+                aria-label={field.label}
+                required={field.required}
                 className="w-full px-4 py-2 rounded-lg border border-input bg-background text-foreground focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent"
               >
-                <option value="">{field.placeholder}</option>
+                <option value="">{field.placeholder || 'Select an option'}</option>
                 {field.options?.map((opt) => (
                   <option key={opt.value} value={opt.value}>
                     {opt.label}
@@ -62,6 +72,7 @@ export function CalculatorForm({
               </select>
             ) : (
               <input
+                id={field.name}
                 type={field.type}
                 value={field.value}
                 onChange={(e) =>
@@ -71,8 +82,10 @@ export function CalculatorForm({
                   )
                 }
                 placeholder={field.placeholder}
+                aria-label={field.label}
                 min={field.min}
                 step={field.step}
+                required={field.required}
                 className="w-full px-4 py-2 rounded-lg border border-input bg-background text-foreground focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent"
               />
             )}
@@ -83,6 +96,7 @@ export function CalculatorForm({
           <button
             type="submit"
             disabled={loading}
+            aria-busy={loading}
             className="flex-1 px-6 py-3 bg-primary text-primary-foreground font-semibold rounded-lg hover:opacity-90 transition-opacity disabled:opacity-50"
           >
             {loading ? 'Calculating...' : buttonLabel}
@@ -90,6 +104,7 @@ export function CalculatorForm({
           <button
             type="button"
             onClick={onClear}
+            aria-label="Clear all form fields"
             className="flex-1 px-6 py-3 bg-accent text-accent-foreground font-semibold rounded-lg hover:opacity-90 transition-opacity"
           >
             Clear Fields

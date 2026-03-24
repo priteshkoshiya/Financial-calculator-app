@@ -26,15 +26,15 @@ export function Sidebar() {
   const pathname = usePathname();
 
   return (
-    <aside className="fixed left-0 top-0 z-40 h-screen w-64 overflow-y-auto border-r border-border bg-sidebar">
+    <aside className="fixed left-0 top-0 z-40 h-screen w-64 overflow-y-auto border-r border-border bg-sidebar" aria-label="Main navigation">
       <div className="p-6">
-        <Link href="/" className="flex items-center gap-2 font-bold text-lg text-primary hover:opacity-80 transition-opacity">
-          <span className="text-2xl">📊</span>
+        <Link href="/" className="flex items-center gap-2 font-bold text-lg text-primary hover:opacity-80 transition-opacity" aria-label="InvestCalc - Home">
+          <span className="text-2xl" aria-hidden="true">📊</span>
           <span>InvestCalc</span>
         </Link>
       </div>
 
-      <nav className="space-y-1 px-4">
+      <nav className="space-y-1 px-4" aria-label="Navigation menu">
         <Link
           href="/"
           className={cn(
@@ -43,13 +43,15 @@ export function Sidebar() {
               ? 'bg-primary text-primary-foreground'
               : 'text-sidebar-foreground hover:bg-sidebar-accent hover:text-sidebar-accent-foreground'
           )}
+          aria-current={pathname === '/' ? 'page' : undefined}
         >
-          🏠 Home
+          <span aria-hidden="true">🏠</span>
+          <span className="ml-2">Home</span>
         </Link>
 
-        <div className="my-6 border-t border-sidebar-border"></div>
+        <div className="my-6 border-t border-sidebar-border" aria-hidden="true"></div>
 
-        <p className="px-4 py-2 text-xs font-semibold uppercase text-sidebar-foreground/60">Calculators</p>
+        <h2 className="px-4 py-2 text-xs font-semibold uppercase text-sidebar-foreground/60" id="calculators-section">Calculators</h2>
 
         {calculators.map((calc) => {
           const isActive = pathname === `/${calc.slug}`;
@@ -63,16 +65,17 @@ export function Sidebar() {
                   ? 'bg-primary text-primary-foreground'
                   : 'text-sidebar-foreground hover:bg-sidebar-accent hover:text-sidebar-accent-foreground'
               )}
+              aria-current={isActive ? 'page' : undefined}
             >
-              <span className="mr-2">{calc.icon}</span>
+              <span className="mr-2" aria-hidden="true">{calc.icon}</span>
               {calc.name}
             </Link>
           );
         })}
 
-        <div className="my-6 border-t border-sidebar-border"></div>
+        <div className="my-6 border-t border-sidebar-border" aria-hidden="true"></div>
 
-        <p className="px-4 py-2 text-xs font-semibold uppercase text-sidebar-foreground/60">Resources</p>
+        <h2 className="px-4 py-2 text-xs font-semibold uppercase text-sidebar-foreground/60" id="resources-section">Resources</h2>
 
         <Link
           href="/about"
@@ -82,8 +85,10 @@ export function Sidebar() {
               ? 'bg-primary text-primary-foreground'
               : 'text-sidebar-foreground hover:bg-sidebar-accent hover:text-sidebar-accent-foreground'
           )}
+          aria-current={pathname === '/about' ? 'page' : undefined}
         >
-          ℹ️ About
+          <span aria-hidden="true">ℹ️</span>
+          <span className="ml-2">About</span>
         </Link>
 
         <Link
@@ -94,8 +99,10 @@ export function Sidebar() {
               ? 'bg-primary text-primary-foreground'
               : 'text-sidebar-foreground hover:bg-sidebar-accent hover:text-sidebar-accent-foreground'
           )}
+          aria-current={pathname === '/faq' ? 'page' : undefined}
         >
-          ❓ FAQ
+          <span aria-hidden="true">❓</span>
+          <span className="ml-2">FAQ</span>
         </Link>
 
         <Link
@@ -106,8 +113,10 @@ export function Sidebar() {
               ? 'bg-primary text-primary-foreground'
               : 'text-sidebar-foreground hover:bg-sidebar-accent hover:text-sidebar-accent-foreground'
           )}
+          aria-current={pathname === '/contact' ? 'page' : undefined}
         >
-          📧 Contact
+          <span aria-hidden="true">📧</span>
+          <span className="ml-2">Contact</span>
         </Link>
       </nav>
 
