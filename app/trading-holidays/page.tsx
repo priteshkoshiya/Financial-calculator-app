@@ -2,7 +2,7 @@ import { MainLayout } from '@/components/main-layout';
 import { Card } from '@/components/ui/card';
 
 export const metadata = {
-  title: 'Stock Market Trading Holidays 2026 | InvestCalc',
+  title: 'Stock Market Trading Holidays 2026 | Bunny Calculator',
   description: 'Complete list of stock market trading holidays for 2026. Plan your trades accordingly.',
 };
 

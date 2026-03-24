@@ -1,4 +1,4 @@
-# InvestCalc - Ready for GitHub Deployment
+# Bunny Calculator - Ready for GitHub Deployment
 
 **Status**: ✅ PRODUCTION READY - Ready to deploy now
 
@@ -24,17 +24,17 @@ A complete, production-grade financial calculator platform:
 ### 1. Create GitHub Repository
 ```bash
 # Go to https://github.com/new
-# Name: investcalc
+# Name: Bunny Calculator
 # Visibility: Public
 # Create repository
 ```
 
 ### 2. Push to GitHub
 ```bash
-cd /path/to/investcalc
+cd /path/to/Bunny Calculator
 git add .
-git commit -m "Initial commit: InvestCalc - Production ready"
-git remote add origin https://github.com/USERNAME/investcalc.git
+git commit -m "Initial commit: Bunny Calculator - Production ready"
+git remote add origin https://github.com/USERNAME/Bunny Calculator.git
 git branch -M main
 git push -u origin main
 ```
@@ -44,13 +44,13 @@ git push -u origin main
 1. Go to https://vercel.com/dashboard
 2. Click "Add New" → "Project"
 3. Click "Import Git Repository"
-4. Paste: https://github.com/USERNAME/investcalc
+4. Paste: https://github.com/USERNAME/Bunny Calculator
 5. Click "Import"
 6. Click "Deploy"
 7. Done!
 ```
 
-Your site will be live at: `investcalc.vercel.app` ✅
+Your site will be live at: `Bunny Calculator.vercel.app` ✅
 
 ---
 
@@ -58,7 +58,7 @@ Your site will be live at: `investcalc.vercel.app` ✅
 
 ### Essential Files
 ```
-investcalc/
+Bunny Calculator/
 ├── .github/workflows/
 │   ├── ci.yml              ← Auto-test on push
 │   └── deploy.yml          ← Auto-deploy to Vercel

@@ -2,14 +2,14 @@ import { MainLayout } from '@/components/main-layout';
 import { FAQSection } from '@/components/faq-section';
 
 export const metadata = {
-  title: 'FAQ | InvestCalc',
-  description: 'Frequently asked questions about InvestCalc and financial calculators',
+  title: 'FAQ | Bunny Calculator',
+  description: 'Frequently asked questions about Bunny Calculator and financial calculators',
 };
 
 const generalFAQs = [
   {
-    question: 'Are InvestCalc calculators really free?',
-    answer: 'Yes, all InvestCalc calculators are 100% free. There are no hidden charges, no registration required, and no premium versions.',
+    question: 'Are Bunny Calculator calculators really free?',
+    answer: 'Yes, all Bunny Calculator calculators are 100% free. There are no hidden charges, no registration required, and no premium versions.',
   },
   {
     question: 'Do I need to create an account?',
@@ -21,7 +21,7 @@ const generalFAQs = [
   },
   {
     question: 'Can I use these calculators for professional advice?',
-    answer: 'No, InvestCalc is an educational platform only. Always consult with qualified financial advisors before making investment decisions.',
+    answer: 'No, Bunny Calculator is an educational platform only. Always consult with qualified financial advisors before making investment decisions.',
   },
 ];
 
@@ -63,7 +63,7 @@ export default function FAQPage() {
           <div>
             <h1 className="text-4xl font-bold text-foreground mb-4">Frequently Asked Questions</h1>
             <p className="text-lg text-muted-foreground">
-              Find answers to common questions about InvestCalc and financial calculations.
+              Find answers to common questions about Bunny Calculator and financial calculations.
             </p>
           </div>
 

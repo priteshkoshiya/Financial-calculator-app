@@ -1,6 +1,6 @@
-# InvestCalc - Complete Documentation Index
+# Bunny Calculator - Complete Documentation Index
 
-Welcome to InvestCalc! This is your guide to all available documentation.
+Welcome to Bunny Calculator! This is your guide to all available documentation.
 
 ## 📚 Documentation Files
 
@@ -114,7 +114,7 @@ Welcome to InvestCalc! This is your guide to all available documentation.
 ## 📍 File Location Reference
 
 ```
-investcalc/
+Bunny Calculator/
 ├── README.md                          ← Main documentation
 ├── QUICK_START.md                     ← 5-minute setup
 ├── CUSTOMIZATION_GUIDE.md             ← How to customize
@@ -257,8 +257,8 @@ investcalc/
 - [shadcn/ui](https://ui.shadcn.com)
 
 ### Contact
-- Email: support@investcalc.com
-- Feedback: feedback@investcalc.com
+- Email: support@Bunny Calculator.com
+- Feedback: feedback@Bunny Calculator.com
 
 ---
 
@@ -358,7 +358,7 @@ Everything you need is documented here. Start with **QUICK_START.md** and you'll
 
 ---
 
-**InvestCalc Complete Documentation**
+**Bunny Calculator Complete Documentation**
 Build date: March 24, 2026
 Status: Complete ✅
 Quality: Production Ready 🚀

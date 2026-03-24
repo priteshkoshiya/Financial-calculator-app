@@ -1,4 +1,4 @@
-# InvestCalc - Production Ready Certification
+# Bunny Calculator - Production Ready Certification
 
 **Status**: ✅ READY FOR PRODUCTION
 **Date**: March 2026
@@ -8,7 +8,7 @@
 
 ## Executive Summary
 
-InvestCalc has been thoroughly tested, audited, and verified to be production-ready. All systems pass enterprise-grade quality standards.
+Bunny Calculator has been thoroughly tested, audited, and verified to be production-ready. All systems pass enterprise-grade quality standards.
 
 ## Quality Metrics
 
@@ -355,7 +355,7 @@ This application has been thoroughly tested, audited, and verified.
 
 ---
 
-**InvestCalc is officially production-ready and approved for deployment.**
+**Bunny Calculator is officially production-ready and approved for deployment.**
 
 Prepared: March 24, 2026
 Status: APPROVED ✅

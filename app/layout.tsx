@@ -8,9 +8,9 @@ const _geistMono = Geist_Mono({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
   metadataBase: new URL('https://finance.bunnycalculator.com'),
-  title: 'InvestCalc | Financial Calculators for Smart Investing',
+  title: 'Bunny Calculator | Financial Calculators for Smart Investing',
   description: 'Free online financial calculators for stock investing, SIP, SWP, EMI, CAGR, and more. Calculate profits, losses, and investment returns instantly.',
-  generator: 'InvestCalc',
+  generator: 'Bunny Calculator',
   keywords: 'stock calculator, SIP calculator, SWP calculator, EMI calculator, CAGR calculator, investment calculator',
   icons: {
     icon: [
@@ -30,18 +30,18 @@ export const metadata: Metadata = {
     apple: '/apple-icon.png',
   },
   openGraph: {
-    title: 'InvestCalc | Financial Calculators for Smart Investing',
+    title: 'Bunny Calculator | Financial Calculators for Smart Investing',
     description: 'Free online financial calculators for stock investing, SIP, SWP, EMI, CAGR, and more.',
     url: 'https://finance.bunnycalculator.com',
-    siteName: 'InvestCalc',
+    siteName: 'Bunny Calculator',
     locale: 'en_US',
     type: 'website',
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'InvestCalc | Free Financial Calculators',
+    title: 'Bunny Calculator | Free Financial Calculators',
     description: 'Free online financial calculators for smart investing',
-    creator: '@investcalc',
+    creator: '@Bunny Calculator',
   },
   robots: {
     index: true,

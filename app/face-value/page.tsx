@@ -3,7 +3,7 @@ import { Card } from '@/components/ui/card';
 import { FAQSection } from '@/components/faq-section';
 
 export const metadata = {
-  title: 'Face Value Split & Demerger | InvestCalc',
+  title: 'Face Value Split & Demerger | Bunny Calculator',
   description: 'Learn about face value changes, stock splits, and corporate demergers.',
 };
 

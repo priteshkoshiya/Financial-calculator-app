@@ -1,6 +1,6 @@
-# InvestCalc - Customization Guide
+# Bunny Calculator - Customization Guide
 
-This guide will help you customize InvestCalc for your specific needs.
+This guide will help you customize Bunny Calculator for your specific needs.
 
 ## 1. Changing Colors & Branding
 
@@ -11,10 +11,10 @@ Edit `/app/globals.css`:
 :root {
   /* Primary color - Main brand color */
   --primary: oklch(0.45 0.25 256);  /* Change this to your brand color */
-  
+
   /* Secondary color - Accent color */
   --secondary: oklch(0.55 0.18 182);
-  
+
   /* Accent color - CTA buttons */
   --accent: oklch(0.65 0.22 45);
 }
@@ -29,7 +29,7 @@ Edit `/app/globals.css`:
 ### Update All References
 1. **Sidebar** - Edit `components/sidebar.tsx`:
    ```tsx
-   <span>InvestCalc</span> // Change to your site name
+   <span>Bunny Calculator</span> // Change to your site name
    ```
 
 2. **Metadata** - Edit `app/layout.tsx`:

@@ -2,8 +2,8 @@ import { MainLayout } from '@/components/main-layout';
 import { Card } from '@/components/ui/card';
 
 export const metadata = {
-  title: 'About InvestCalc | Financial Calculator Platform',
-  description: 'Learn about InvestCalc, your trusted free financial calculator platform for smart investing.',
+  title: 'About Bunny Calculator | Financial Calculator Platform',
+  description: 'Learn about Bunny Calculator, your trusted free financial calculator platform for smart investing.',
 };
 
 export default function AboutPage() {
@@ -12,13 +12,13 @@ export default function AboutPage() {
       <div className="px-6 py-12">
         <div className="max-w-4xl mx-auto space-y-12">
           <div>
-            <h1 className="text-4xl font-bold text-foreground mb-6">About InvestCalc</h1>
+            <h1 className="text-4xl font-bold text-foreground mb-6">About Bunny Calculator</h1>
           </div>
 
           <Card className="p-8 bg-card border border-border">
             <h2 className="text-2xl font-bold text-foreground mb-4">Our Mission</h2>
             <p className="text-muted-foreground leading-relaxed">
-              InvestCalc is dedicated to making financial planning accessible to everyone. We provide free, accurate, and easy-to-use financial calculators to help you make informed investment decisions.
+              Bunny Calculator is dedicated to making financial planning accessible to everyone. We provide free, accurate, and easy-to-use financial calculators to help you make informed investment decisions.
             </p>
           </Card>
 
@@ -44,7 +44,7 @@ export default function AboutPage() {
           </div>
 
           <Card className="p-8 bg-secondary/10 border border-secondary/20">
-            <h2 className="text-2xl font-bold text-foreground mb-4">Why Choose InvestCalc?</h2>
+            <h2 className="text-2xl font-bold text-foreground mb-4">Why Choose Bunny Calculator?</h2>
             <ul className="space-y-3 text-foreground">
               <li className="flex gap-3">
                 <span className="text-primary font-bold">✓</span>
@@ -72,7 +72,7 @@ export default function AboutPage() {
           <Card className="p-8 bg-card border border-border">
             <h2 className="text-2xl font-bold text-foreground mb-4">Disclaimer</h2>
             <p className="text-muted-foreground leading-relaxed">
-              InvestCalc is an educational platform providing tools for financial calculations. The results are based on formulas and assumptions you provide. Always consult with a qualified financial advisor before making any investment decisions. Past performance is not indicative of future results.
+              Bunny Calculator is an educational platform providing tools for financial calculations. The results are based on formulas and assumptions you provide. Always consult with a qualified financial advisor before making any investment decisions. Past performance is not indicative of future results.
             </p>
           </Card>
         </div>

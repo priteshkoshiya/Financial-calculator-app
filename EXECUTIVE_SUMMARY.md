@@ -1,4 +1,4 @@
-# InvestCalc - Executive Summary
+# Bunny Calculator - Executive Summary
 
 ## Project Completion Status: ✅ 100% COMPLETE
 
@@ -273,7 +273,7 @@ A professional, production-ready financial calculator platform featuring:
 
 ### Recommended Platform: Vercel
 - **Cost:** Free tier or Pro ($20/month)
-- **Benefits:** 
+- **Benefits:**
   - Automatic deployments from GitHub
   - Global edge network
   - Built-in analytics
@@ -289,7 +289,7 @@ A professional, production-ready financial calculator platform featuring:
 
 ## Conclusion
 
-**InvestCalc is production-ready, fully tested, and verified to deliver:**
+**Bunny Calculator is production-ready, fully tested, and verified to deliver:**
 
 ✅ Accurate financial calculations
 ✅ Professional user experience

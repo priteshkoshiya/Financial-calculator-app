@@ -1,7 +1,7 @@
-# InvestCalc - Full Responsiveness Guide
+# Bunny Calculator - Full Responsiveness Guide
 
 ## Overview
-InvestCalc is now 100% fully responsive across all device sizes (mobile, tablet, desktop, and ultra-wide screens).
+Bunny Calculator is now 100% fully responsive across all device sizes (mobile, tablet, desktop, and ultra-wide screens).
 
 ## Responsive Breakpoints Used
 
@@ -67,7 +67,7 @@ Mobile (default) → Tablet (md:) → Desktop (lg:) → Ultra-wide (xl:)
 - **Mobile**: Full-width with adjusted padding
 - **Tablet**: Medium padding, responsive text
 - **Desktop**: Full layout with large text
-- **Changes**: 
+- **Changes**:
   - Title: text-3xl md:text-4xl lg:text-5xl
   - Button stack: flex-col sm:flex-row
   - Padding: px-4 md:px-6

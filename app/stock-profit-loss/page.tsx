@@ -3,7 +3,7 @@ import { MainLayout } from '@/components/main-layout';
 import { StockProfitLossCalculator } from '@/components/stock-profit-loss-calculator';
 
 export const metadata: Metadata = {
-  title: 'Stock Profit/Loss Calculator | InvestCalc',
+  title: 'Stock Profit/Loss Calculator | Bunny Calculator',
   description: 'Calculate your stock trading profit or loss instantly. Enter quantity, buy price, and sell price to get detailed results.',
   keywords: 'stock calculator, profit loss calculator, trading calculator',
 };

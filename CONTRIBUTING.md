@@ -1,6 +1,6 @@
-# Contributing to InvestCalc
+# Contributing to Bunny Calculator
 
-Thank you for considering contributing to InvestCalc! We welcome contributions from everyone.
+Thank you for considering contributing to Bunny Calculator! We welcome contributions from everyone.
 
 ## Getting Started
 
@@ -65,7 +65,7 @@ perf: Optimize performance
 export function calculateMyCalculator(input1: number, input2: number) {
   // Calculate result
   const result = input1 + input2;
-  
+
   return {
     result: Math.round(result * 100) / 100,
     // other fields
@@ -79,7 +79,7 @@ import type { Metadata } from 'next';
 import { MainLayout } from '@/components/main-layout';
 
 export const metadata: Metadata = {
-  title: 'My Calculator | InvestCalc',
+  title: 'My Calculator | Bunny Calculator',
   description: 'Calculate something interesting.',
 };
 
@@ -186,4 +186,4 @@ By contributing, you agree your code will be licensed under MIT License.
 
 ---
 
-**Thank you for improving InvestCalc!** 🎉
+**Thank you for improving Bunny Calculator!** 🎉

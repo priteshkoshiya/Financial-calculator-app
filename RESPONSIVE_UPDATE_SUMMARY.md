@@ -1,8 +1,8 @@
-# InvestCalc - Full Responsiveness Update Summary
+# Bunny Calculator - Full Responsiveness Update Summary
 
 ## What Was Updated
 
-The entire InvestCalc platform has been made 100% fully responsive across all device sizes from mobile phones (320px) to ultra-wide desktops (2560px+).
+The entire Bunny Calculator platform has been made 100% fully responsive across all device sizes from mobile phones (320px) to ultra-wide desktops (2560px+).
 
 ## Components Updated
 
@@ -206,7 +206,7 @@ Mobile First Strategy:
 
 ## Status
 
-🎉 **InvestCalc is now 100% Fully Responsive!**
+🎉 **Bunny Calculator is now 100% Fully Responsive!**
 
 | Metric | Status |
 |--------|--------|

@@ -1,4 +1,4 @@
-# InvestCalc - Quick Start Guide
+# Bunny Calculator - Quick Start Guide
 
 Get your financial calculator website up and running in minutes! 🚀
 
@@ -13,7 +13,7 @@ Get your financial calculator website up and running in minutes! 🚀
 
 ### 1. Install Dependencies
 ```bash
-cd investcalc
+cd Bunny Calculator
 pnpm install
 ```
 
@@ -29,14 +29,14 @@ That's it! Your calculator site is live! 🎉
 
 ## 🎯 What's Included?
 
-✅ 15 fully functional calculators  
-✅ Professional design system  
-✅ Mobile-responsive layout  
-✅ SEO optimized  
-✅ 100% performance optimized  
-✅ No backend required  
-✅ No database needed  
-✅ Ready to deploy  
+✅ 15 fully functional calculators
+✅ Professional design system
+✅ Mobile-responsive layout
+✅ SEO optimized
+✅ 100% performance optimized
+✅ No backend required
+✅ No database needed
+✅ Ready to deploy
 
 ## 🚀 Deploy in 2 Minutes
 
@@ -101,7 +101,7 @@ All calculators follow the same pattern:
 ## 🔧 File Structure at a Glance
 
 ```
-investcalc/
+Bunny Calculator/
 ├── app/                    # All pages go here
 │   ├── page.tsx           # Home page
 │   ├── layout.tsx         # Root layout

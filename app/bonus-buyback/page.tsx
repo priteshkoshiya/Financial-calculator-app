@@ -3,7 +3,7 @@ import { Card } from '@/components/ui/card';
 import { FAQSection } from '@/components/faq-section';
 
 export const metadata = {
-  title: 'Bonus & Buyback Details | InvestCalc',
+  title: 'Bonus & Buyback Details | Bunny Calculator',
   description: 'Understand stock bonuses and share buybacks and their impact on your investment.',
 };
 

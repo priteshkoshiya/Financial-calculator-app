@@ -1,8 +1,8 @@
-# InvestCalc - Performance Optimization Guide
+# Bunny Calculator - Performance Optimization Guide
 
 ## 🚀 Performance Metrics
 
-InvestCalc is optimized for 100% Lighthouse performance.
+Bunny Calculator is optimized for 100% Lighthouse performance.
 
 ### Target Scores
 - **Performance**: 95+
@@ -434,7 +434,7 @@ lighthouse https://yourdomain.com \
 
 ## Summary
 
-InvestCalc is built with **performance as a core principle**:
+Bunny Calculator is built with **performance as a core principle**:
 
 - ✅ 100% Lighthouse ready
 - ✅ Core Web Vitals optimized

@@ -2,8 +2,8 @@ import { MainLayout } from '@/components/main-layout';
 import { Card } from '@/components/ui/card';
 
 export const metadata = {
-  title: 'Contact InvestCalc | Financial Calculators',
-  description: 'Contact InvestCalc for support, feedback, and inquiries',
+  title: 'Contact Bunny Calculator | Financial Calculators',
+  description: 'Contact Bunny Calculator for support, feedback, and inquiries',
 };
 
 export default function ContactPage() {
@@ -23,10 +23,10 @@ export default function ContactPage() {
               <h3 className="text-xl font-bold text-primary mb-4">Email</h3>
               <p className="text-muted-foreground mb-2">For inquiries and support:</p>
               <a
-                href="mailto:support@investcalc.com"
+                href="mailto:support@bunnycalculator.com"
                 className="text-primary font-semibold hover:opacity-80 transition-opacity"
               >
-                support@investcalc.com
+                support@bunnycalculator.com
               </a>
             </Card>
 
@@ -34,10 +34,10 @@ export default function ContactPage() {
               <h3 className="text-xl font-bold text-primary mb-4">Feedback</h3>
               <p className="text-muted-foreground mb-2">Share your suggestions:</p>
               <a
-                href="mailto:feedback@investcalc.com"
+                href="mailto:feedback@bunnycalculator.com"
                 className="text-primary font-semibold hover:opacity-80 transition-opacity"
               >
-                feedback@investcalc.com
+                feedback@bunnycalculator.com
               </a>
             </Card>
           </div>
@@ -54,13 +54,13 @@ export default function ContactPage() {
               <div>
                 <h3 className="font-semibold text-foreground mb-2">Found a Bug?</h3>
                 <p className="text-muted-foreground">
-                  Please let us know by emailing support@investcalc.com with details about the issue.
+                  Please let us know by emailing support@bunnycalculator.com with details about the issue.
                 </p>
               </div>
               <div>
                 <h3 className="font-semibold text-foreground mb-2">Feature Request?</h3>
                 <p className="text-muted-foreground">
-                  We're always looking to add new calculators and features. Send your ideas to feedback@investcalc.com.
+                  We're always looking to add new calculators and features. Send your ideas to feedback@bunnycalculator.com.
                 </p>
               </div>
             </div>

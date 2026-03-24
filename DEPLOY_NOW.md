@@ -1,13 +1,13 @@
-# Deploy InvestCalc to GitHub NOW
+# Deploy Bunny Calculator to GitHub NOW
 
-Your InvestCalc project is **100% ready** for GitHub and production deployment. Follow these exact steps.
+Your Bunny Calculator project is **100% ready** for GitHub and production deployment. Follow these exact steps.
 
 ## 5-Minute Setup
 
 ### Step 1: Create GitHub Repository (2 minutes)
 ```bash
 # Open https://github.com/new
-# Name it: investcalc
+# Name it: Bunny Calculator
 # Description: Free financial calculators for smart investing
 # Visibility: Public (recommended)
 # Click "Create repository"
@@ -16,14 +16,14 @@ Your InvestCalc project is **100% ready** for GitHub and production deployment. 
 ### Step 2: Push Code to GitHub (2 minutes)
 ```bash
 # From your project directory:
-cd /path/to/investcalc
+cd /path/to/Bunny Calculator
 
 # Initialize and commit (if not done already)
 git add .
-git commit -m "Initial commit: InvestCalc - Financial Calculator Platform"
+git commit -m "Initial commit: Bunny Calculator - Financial Calculator Platform"
 
 # Add GitHub remote (replace USERNAME)
-git remote add origin https://github.com/USERNAME/investcalc.git
+git remote add origin https://github.com/USERNAME/Bunny Calculator.git
 git branch -M main
 git push -u origin main
 ```
@@ -33,7 +33,7 @@ git push -u origin main
 1. Go to https://vercel.com/dashboard
 2. Click "Add New..." → "Project"
 3. Click "Import Git Repository"
-4. Paste: https://github.com/USERNAME/investcalc
+4. Paste: https://github.com/USERNAME/Bunny Calculator
 5. Click "Import"
 6. Click "Deploy"
 7. Done! Your site is live 🎉
@@ -42,7 +42,7 @@ git push -u origin main
 ## Get Your Live URL
 
 After deployment, Vercel gives you:
-- **Free URL**: `investcalc.vercel.app`
+- **Free URL**: `Bunny Calculator.vercel.app`
 - **Custom Domain**: Add your own domain (optional)
 
 ## What's Already Done For You
@@ -93,7 +93,7 @@ After deployment, Vercel gives you:
 ## Files Ready for GitHub
 
 ```
-investcalc/
+Bunny Calculator/
 ├── .github/
 │   └── workflows/
 │       ├── ci.yml           # Automatic testing
@@ -116,7 +116,7 @@ investcalc/
 ## After Going Live
 
 ### Share Your Site
-- **LinkedIn**: "Launched InvestCalc - Free financial calculators..."
+- **LinkedIn**: "Launched Bunny Calculator - Free financial calculators..."
 - **Twitter**: Tweet your link with #buildinpublic
 - **Communities**: Share in dev/finance communities
 - **Friends**: Send the link!
@@ -166,7 +166,7 @@ pnpm update
 
 ## You're All Set!
 
-InvestCalc is production-ready, fully documented, and optimized for success.
+Bunny Calculator is production-ready, fully documented, and optimized for success.
 
 ```
 GitHub → Vercel → Live Website
@@ -188,7 +188,7 @@ pnpm tsc --noEmit
 
 # Commit everything
 git add .
-git commit -m "Final: InvestCalc ready for production"
+git commit -m "Final: Bunny Calculator ready for production"
 
 # Push to GitHub (this triggers auto-deployment)
 git push origin main

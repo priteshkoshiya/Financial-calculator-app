@@ -1,4 +1,4 @@
-# InvestCalc - Completion Checklist ✅
+# Bunny Calculator - Completion Checklist ✅
 
 ## Project Completion Status: 100% ✅
 
@@ -9,7 +9,7 @@ This document confirms all requested features have been implemented.
 ## ✅ Core Requirements Met
 
 ### Site Name & Branding
-- [x] Site named "InvestCalc" (Modern, professional name)
+- [x] Site named "Bunny Calculator" (Modern, professional name)
 - [x] Blue (#0066CC) and Teal (#00A8A8) color scheme
 - [x] Modern reburst design with clean UI
 - [x] Professional typography
@@ -416,7 +416,7 @@ For questions or customization help:
 
 ---
 
-**InvestCalc is ready to launch! 🚀**
+**Bunny Calculator is ready to launch! 🚀**
 
 Built with modern web technologies and best practices.
 Optimized for performance, accessibility, and SEO.

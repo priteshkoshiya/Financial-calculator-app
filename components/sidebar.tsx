@@ -28,9 +28,9 @@ export function Sidebar() {
   return (
     <aside className="h-screen w-80 overflow-y-auto border-r border-border bg-sidebar flex flex-col" aria-label="Main navigation">
       <div className="p-4 md:p-6">
-        <Link href="/" className="flex items-center gap-2 font-bold text-lg text-primary hover:opacity-80 transition-opacity" aria-label="InvestCalc - Home">
+        <Link href="/" className="flex items-center gap-2 font-bold text-lg text-primary hover:opacity-80 transition-opacity" aria-label="Bunny Calculator - Home">
           <span className="text-2xl" aria-hidden="true">📊</span>
-          <span className="hidden sm:inline">InvestCalc</span>
+          <span className="hidden sm:inline">Bunny Calculator</span>
         </Link>
       </div>
 
@@ -121,7 +121,7 @@ export function Sidebar() {
       </nav>
 
       <div className="mt-auto p-3 md:p-4 text-xs text-sidebar-foreground/50 border-t border-sidebar-border">
-        <p>© 2026 InvestCalc</p>
+        <p>© 2026 Bunny Calculator</p>
       </div>
     </aside>
   );

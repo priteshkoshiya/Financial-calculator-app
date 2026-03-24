@@ -1,4 +1,4 @@
-# InvestCalc - Project Summary
+# Bunny Calculator - Project Summary
 
 ## ✅ Completed Deliverables
 
@@ -197,7 +197,7 @@ Each calculator page includes:
 
 ## Summary
 
-InvestCalc is a **production-ready financial calculator platform** with:
+Bunny Calculator is a **production-ready financial calculator platform** with:
 - 15 fully functional calculators
 - Professional design system
 - Complete SEO optimization

@@ -1,6 +1,6 @@
-# InvestCalc - START HERE FOR GITHUB DEPLOYMENT
+# Bunny Calculator - START HERE FOR GITHUB DEPLOYMENT
 
-Welcome! Your InvestCalc financial calculator platform is **100% ready** to deploy to GitHub and production.
+Welcome! Your Bunny Calculator financial calculator platform is **100% ready** to deploy to GitHub and production.
 
 This file guides you to the right documentation based on what you need.
 
@@ -229,17 +229,17 @@ What you're deploying:
 
 ```bash
 # 1. Create GitHub repo and push code
-git remote add origin https://github.com/USERNAME/investcalc.git
+git remote add origin https://github.com/USERNAME/Bunny Calculator.git
 git branch -M main
 git push -u origin main
 
 # 2. Go to Vercel
 # https://vercel.com/dashboard
 # Click "Import Git Repository"
-# Paste: https://github.com/USERNAME/investcalc
+# Paste: https://github.com/USERNAME/Bunny Calculator
 # Click "Deploy"
 
-# 3. Done! Your site is live at investcalc.vercel.app
+# 3. Done! Your site is live at Bunny Calculator.vercel.app
 ```
 
 ---

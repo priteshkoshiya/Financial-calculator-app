@@ -1,6 +1,6 @@
 # GitHub Deployment Ready Checklist
 
-Use this checklist to ensure InvestCalc is ready for GitHub and production deployment.
+Use this checklist to ensure Bunny Calculator is ready for GitHub and production deployment.
 
 ## Pre-Deployment
 

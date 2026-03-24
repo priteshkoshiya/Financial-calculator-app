@@ -45,8 +45,8 @@ export function MainLayout({ children }: { children: React.ReactNode }) {
         </div>
         <footer className="border-t border-border bg-card py-8 mt-12">
           <div className="max-w-5xl mx-auto px-4 md:px-6 text-center text-xs md:text-sm text-muted-foreground space-y-2">
-            <p>© 2026 InvestCalc. Free financial calculators for smart investing.</p>
-            <p>Disclaimer: InvestCalc provides educational tools only. Always consult a financial advisor before making investment decisions.</p>
+            <p>© 2026 Bunny Calculator. Free financial calculators for smart investing.</p>
+            <p>Disclaimer: Bunny Calculator provides educational tools only. Always consult a financial advisor before making investment decisions.</p>
           </div>
         </footer>
       </main>

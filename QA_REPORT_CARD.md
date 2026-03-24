@@ -1,6 +1,6 @@
-# InvestCalc - Quality Assurance Report Card
+# Bunny Calculator - Quality Assurance Report Card
 
-**Project:** InvestCalc Financial Calculator Platform
+**Project:** Bunny Calculator Financial Calculator Platform
 **Date:** March 24, 2026
 **Status:** ✅ PRODUCTION READY
 

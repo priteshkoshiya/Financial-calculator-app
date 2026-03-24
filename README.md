@@ -1,13 +1,13 @@
-# InvestCalc - Financial Calculators Platform
+# Bunny Calculator - Financial Calculators Platform
 
-[![Node.js CI](https://github.com/yourusername/investcalc/actions/workflows/ci.yml/badge.svg)](https://github.com/yourusername/investcalc/actions/workflows/ci.yml)
-[![Deploy](https://github.com/yourusername/investcalc/actions/workflows/deploy.yml/badge.svg)](https://github.com/yourusername/investcalc/actions/workflows/deploy.yml)
+[![Node.js CI](https://github.com/yourusername/Bunny Calculator/actions/workflows/ci.yml/badge.svg)](https://github.com/yourusername/Bunny Calculator/actions/workflows/ci.yml)
+[![Deploy](https://github.com/yourusername/Bunny Calculator/actions/workflows/deploy.yml/badge.svg)](https://github.com/yourusername/Bunny Calculator/actions/workflows/deploy.yml)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 [![Built with Next.js](https://img.shields.io/badge/Built%20with-Next.js%2016-black)](https://nextjs.org)
 
 A modern, high-performance financial calculator platform built with Next.js 16, React 19, and Tailwind CSS.
 
-**[Demo](https://investcalc.vercel.app)** • **[Documentation](./GITHUB_DEPLOYMENT.md)** • **[Report Issue](https://github.com/yourusername/investcalc/issues)**
+**[Demo](https://Bunny Calculator.vercel.app)** • **[Documentation](./GITHUB_DEPLOYMENT.md)** • **[Report Issue](https://github.com/yourusername/Bunny Calculator/issues)**
 
 ## Features
 
@@ -130,8 +130,8 @@ Years to Double = 72 ÷ Annual Rate (%)
 
 ```bash
 # Clone the repository
-git clone https://github.com/yourusername/investcalc.git
-cd investcalc
+git clone https://github.com/yourusername/Bunny Calculator.git
+cd Bunny Calculator
 
 # Install dependencies
 pnpm install
@@ -230,12 +230,12 @@ MIT License - Feel free to use this project for personal or commercial purposes.
 ## Support
 
 For issues, suggestions, or feature requests:
-- Email: support@investcalc.com
-- Feedback: feedback@investcalc.com
+- Email: support@Bunny Calculator.com
+- Feedback: feedback@Bunny Calculator.com
 
 ## Disclaimer
 
-InvestCalc is an educational platform providing tools for financial calculations. Always consult with a qualified financial advisor before making investment decisions.
+Bunny Calculator is an educational platform providing tools for financial calculations. Always consult with a qualified financial advisor before making investment decisions.
 
 ---
 

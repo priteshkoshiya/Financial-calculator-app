@@ -1,6 +1,6 @@
-# GitHub Deployment Guide for InvestCalc
+# GitHub Deployment Guide for Bunny Calculator
 
-This guide walks you through deploying InvestCalc to GitHub and connecting it to Vercel for automatic deployments.
+This guide walks you through deploying Bunny Calculator to GitHub and connecting it to Vercel for automatic deployments.
 
 ## Prerequisites
 
@@ -11,7 +11,7 @@ This guide walks you through deploying InvestCalc to GitHub and connecting it to
 ## Step 1: Create GitHub Repository
 
 1. Go to https://github.com/new
-2. Create a new repository named `investcalc`
+2. Create a new repository named `Bunny Calculator`
 3. Set visibility to **Public** (recommended) or **Private**
 4. Do NOT initialize with README (we have one)
 5. Click "Create repository"
@@ -26,10 +26,10 @@ git init
 git add .
 
 # Create initial commit
-git commit -m "Initial commit: InvestCalc financial calculator platform"
+git commit -m "Initial commit: Bunny Calculator financial calculator platform"
 
 # Add GitHub remote (replace USERNAME with your GitHub username)
-git remote add origin https://github.com/USERNAME/investcalc.git
+git remote add origin https://github.com/USERNAME/Bunny Calculator.git
 
 # Rename branch to main (if needed)
 git branch -M main
@@ -45,11 +45,11 @@ git push -u origin main
 1. Go to https://vercel.com/dashboard
 2. Click "Add New..." → "Project"
 3. Click "Import Git Repository"
-4. Paste your repository URL: `https://github.com/USERNAME/investcalc`
+4. Paste your repository URL: `https://github.com/USERNAME/Bunny Calculator`
 5. Click "Import"
 6. Vercel will detect it's a Next.js project
 7. Click "Deploy"
-8. Your site will be live at `investcalc.vercel.app` (or custom domain)
+8. Your site will be live at `Bunny Calculator.vercel.app` (or custom domain)
 
 ### Option B: Manual Deployment with Vercel CLI
 
@@ -225,7 +225,7 @@ git push origin main
 
 ## Summary
 
-Your InvestCalc site is now:
+Your Bunny Calculator site is now:
 - Hosted on GitHub (version control)
 - Deployed on Vercel (production hosting)
 - Using CI/CD (automated testing & deployment)

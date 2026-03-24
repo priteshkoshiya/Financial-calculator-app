@@ -1,4 +1,4 @@
-# 🎉 InvestCalc - START HERE
+# 🎉 Bunny Calculator - START HERE
 
 ## Welcome! Your financial calculator website is ready! 🚀
 
@@ -9,47 +9,47 @@ You requested a **static financial calculator site** with a modern design and 15
 ## ✅ What You Got
 
 ### 15 Financial Calculators
-✅ Stock Profit/Loss Calculator  
-✅ Stock Average Calculator  
-✅ SIP Calculator  
-✅ SWP Calculator  
-✅ EMI Calculator  
-✅ CAGR Calculator  
-✅ Stock Split Calculator  
-✅ Bonus Share Calculator  
-✅ Lumpsum Calculator  
-✅ Rule of 72 Calculator  
-✅ Percentage Calculator  
-✅ Dividend Details (Educational)  
-✅ Bonus & Buyback Details (Educational)  
-✅ Face Value Split & Demerger (Educational)  
-✅ Trading Holidays 2026  
+✅ Stock Profit/Loss Calculator
+✅ Stock Average Calculator
+✅ SIP Calculator
+✅ SWP Calculator
+✅ EMI Calculator
+✅ CAGR Calculator
+✅ Stock Split Calculator
+✅ Bonus Share Calculator
+✅ Lumpsum Calculator
+✅ Rule of 72 Calculator
+✅ Percentage Calculator
+✅ Dividend Details (Educational)
+✅ Bonus & Buyback Details (Educational)
+✅ Face Value Split & Demerger (Educational)
+✅ Trading Holidays 2026
 
 ### Additional Pages
-✅ Home Page with features & statistics  
-✅ About Page  
-✅ FAQ Page  
-✅ Contact Page  
+✅ Home Page with features & statistics
+✅ About Page
+✅ FAQ Page
+✅ Contact Page
 
 ### Design System
-✅ Modern Blue (#0066CC) & Teal (#00A8A8) theme  
-✅ Orange (#E8B54B) accent buttons  
-✅ Responsive sidebar navigation  
-✅ Professional typography  
-✅ Dark mode support  
-✅ Mobile-first responsive design  
+✅ Modern Blue (#0066CC) & Teal (#00A8A8) theme
+✅ Orange (#E8B54B) accent buttons
+✅ Responsive sidebar navigation
+✅ Professional typography
+✅ Dark mode support
+✅ Mobile-first responsive design
 
 ### Features Included
-✅ 100% free, no backend needed  
-✅ All calculations client-side  
-✅ Instant results  
-✅ Educational content on every page  
-✅ FAQ sections on calculators  
-✅ How-to guides  
-✅ Formula explanations  
-✅ Accessibility compliant (WCAG AA)  
-✅ SEO optimized  
-✅ 100% Lighthouse performance ready  
+✅ 100% free, no backend needed
+✅ All calculations client-side
+✅ Instant results
+✅ Educational content on every page
+✅ FAQ sections on calculators
+✅ How-to guides
+✅ Formula explanations
+✅ Accessibility compliant (WCAG AA)
+✅ SEO optimized
+✅ 100% Lighthouse performance ready
 
 ---
 
@@ -301,8 +301,8 @@ npm start
 - Check pnpm/npm is working
 
 ### Email Support
-- support@investcalc.com
-- feedback@investcalc.com
+- support@Bunny Calculator.com
+- feedback@Bunny Calculator.com
 
 ---
 
@@ -310,7 +310,7 @@ npm start
 
 **Everything is ready to go!**
 
-Your InvestCalc website is:
+Your Bunny Calculator website is:
 - ✅ Fully functional
 - ✅ Production ready
 - ✅ Professionally designed
@@ -348,7 +348,7 @@ http://localhost:3000
 
 **Built with ❤️ for smart investors**
 
-InvestCalc v1.0 - March 2026
+Bunny Calculator v1.0 - March 2026
 Production Ready ✅
 Performance Optimized ⚡
 Fully Documented 📚

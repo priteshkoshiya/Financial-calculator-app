@@ -3,7 +3,7 @@ import { Card } from '@/components/ui/card';
 import { FAQSection } from '@/components/faq-section';
 
 export const metadata = {
-  title: 'Dividend Details Guide | InvestCalc',
+  title: 'Dividend Details Guide | Bunny Calculator',
   description: 'Learn everything about stock dividends, dividend yield, and dividend taxation.',
 };
 

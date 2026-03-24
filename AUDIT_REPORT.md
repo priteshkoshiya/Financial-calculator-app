@@ -1,7 +1,7 @@
-# InvestCalc - Comprehensive Audit Report
+# Bunny Calculator - Comprehensive Audit Report
 
 ## Executive Summary
-This document provides a comprehensive audit of all calculator calculations, SEO optimization, performance metrics, and accessibility compliance for the InvestCalc platform.
+This document provides a comprehensive audit of all calculator calculations, SEO optimization, performance metrics, and accessibility compliance for the Bunny Calculator platform.
 
 ---
 
@@ -170,7 +170,7 @@ This document provides a comprehensive audit of all calculator calculations, SEO
 ### 2.1 Page-Level SEO ✅
 
 #### Home Page
-- ✅ Meta Title: "InvestCalc | Financial Calculators for Smart Investing"
+- ✅ Meta Title: "Bunny Calculator | Financial Calculators for Smart Investing"
 - ✅ Meta Description: Clear, compelling description with target keywords
 - ✅ OG Tags: Complete with title, description, URL, site name
 - ✅ Canonical URLs: Set for each page
@@ -374,7 +374,7 @@ This document provides a comprehensive audit of all calculator calculations, SEO
 
 ## Conclusion
 
-InvestCalc is a **production-ready**, **SEO-optimized**, and **fully accessible** financial calculator platform that:
+Bunny Calculator is a **production-ready**, **SEO-optimized**, and **fully accessible** financial calculator platform that:
 
 ✅ Uses industry-standard financial formulas
 ✅ Implements comprehensive SEO best practices
