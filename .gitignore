@@ -7,10 +7,62 @@ __v0_jsx-dev-runtime.ts
 .vercel/
 next.user-config.*
 
-# Environment variables
-.env*.local
+# Dependencies
+node_modules/
+.pnp
+.pnp.js
+pnpm-lock.yaml
+yarn.lock
+package-lock.json
 
-# Common ignores
-node_modules
+# Testing
+coverage/
+.nyc_output/
+
+# Production
 .next/
+out/
+dist/
+build/
+
+# Environment variables
+.env
+.env.local
+.env.development.local
+.env.test.local
+.env.production.local
+
+# IDE
+.vscode/
+.idea/
+*.sublime-project
+*.sublime-workspace
+.swp
+*.swo
+*~
+
+# Logs
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+lerna-debug.log*
+
+# OS
 .DS_Store
+Thumbs.db
+.Spotlight-V100
+.Trashes
+
+# Build artifacts
+*.tsbuildinfo
+dist/
+.turbo/
+
+# Cache
+.cache/
+.eslintcache
+
+# Misc
+.vscode-test
+.env.*.local

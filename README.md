@@ -1,6 +1,13 @@
 # InvestCalc - Financial Calculators Platform
 
+[![Node.js CI](https://github.com/yourusername/investcalc/actions/workflows/ci.yml/badge.svg)](https://github.com/yourusername/investcalc/actions/workflows/ci.yml)
+[![Deploy](https://github.com/yourusername/investcalc/actions/workflows/deploy.yml/badge.svg)](https://github.com/yourusername/investcalc/actions/workflows/deploy.yml)
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
+[![Built with Next.js](https://img.shields.io/badge/Built%20with-Next.js%2016-black)](https://nextjs.org)
+
 A modern, high-performance financial calculator platform built with Next.js 16, React 19, and Tailwind CSS.
+
+**[Demo](https://investcalc.vercel.app)** • **[Documentation](./GITHUB_DEPLOYMENT.md)** • **[Report Issue](https://github.com/yourusername/investcalc/issues)**
 
 ## Features
 
@@ -119,11 +126,12 @@ Years to Double = 72 ÷ Annual Rate (%)
 
 ## Getting Started
 
-### Installation
+### Local Development
 
 ```bash
 # Clone the repository
 git clone https://github.com/yourusername/investcalc.git
+cd investcalc
 
 # Install dependencies
 pnpm install
@@ -133,12 +141,29 @@ pnpm dev
 
 # Build for production
 pnpm build
+
+# Start production server
 pnpm start
 ```
 
+Open [http://localhost:3000](http://localhost:3000) in your browser.
+
+### Deployment
+
+#### Vercel (Recommended)
+- See [GITHUB_DEPLOYMENT.md](./GITHUB_DEPLOYMENT.md) for detailed instructions
+- Push to GitHub → Automatic deployment to Vercel
+- Free tier available at vercel.com
+
+#### Other Platforms
+- GitHub Pages
+- Netlify
+- AWS Amplify
+- Any static hosting service
+
 ### Environment Variables
 
-No environment variables required. This is a static site with client-side calculations only.
+No environment variables required. This is a static site with all calculations done client-side.
 
 ## Usage
 
