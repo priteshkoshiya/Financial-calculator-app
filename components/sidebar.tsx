@@ -26,7 +26,7 @@ export function Sidebar() {
   const pathname = usePathname();
 
   return (
-    <aside className="h-screen w-64 overflow-y-auto border-r border-border bg-sidebar flex flex-col" aria-label="Main navigation">
+    <aside className="h-screen w-80 overflow-y-auto border-r border-border bg-sidebar flex flex-col" aria-label="Main navigation">
       <div className="p-4 md:p-6">
         <Link href="/" className="flex items-center gap-2 font-bold text-lg text-primary hover:opacity-80 transition-opacity" aria-label="InvestCalc - Home">
           <span className="text-2xl" aria-hidden="true">📊</span>

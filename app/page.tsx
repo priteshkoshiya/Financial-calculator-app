@@ -121,9 +121,9 @@ export default function Home() {
           </h2>
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-3 md:gap-6">
             {features.map((feature, idx) => (
-              <Link key={idx} href={`/${feature.slug}`}>
+              <Link key={idx} href={`/${feature.slug}`} aria-label={feature.title}>
                 <Card className="p-4 md:p-6 h-full border border-border hover:border-primary/50 hover:shadow-lg transition-all duration-300 cursor-pointer bg-card hover:bg-card/80">
-                  <div className="text-3xl md:text-4xl mb-3 md:mb-4">{feature.icon}</div>
+                  <div className="text-3xl md:text-4xl mb-3 md:mb-4" aria-hidden="true">{feature.icon}</div>
                   <h3 className="font-semibold text-foreground mb-2 text-xs md:text-sm">
                     {feature.title}
                   </h3>

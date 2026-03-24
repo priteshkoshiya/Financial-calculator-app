@@ -7,6 +7,7 @@ const _geist = Geist({ subsets: ["latin"] });
 const _geistMono = Geist_Mono({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
+  metadataBase: new URL('https://finance.bunnycalculator.com'),
   title: 'InvestCalc | Financial Calculators for Smart Investing',
   description: 'Free online financial calculators for stock investing, SIP, SWP, EMI, CAGR, and more. Calculate profits, losses, and investment returns instantly.',
   generator: 'InvestCalc',
@@ -31,10 +32,27 @@ export const metadata: Metadata = {
   openGraph: {
     title: 'InvestCalc | Financial Calculators for Smart Investing',
     description: 'Free online financial calculators for stock investing, SIP, SWP, EMI, CAGR, and more.',
-    url: 'https://investcalc.com',
+    url: 'https://finance.bunnycalculator.com',
     siteName: 'InvestCalc',
     locale: 'en_US',
     type: 'website',
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: 'InvestCalc | Free Financial Calculators',
+    description: 'Free online financial calculators for smart investing',
+    creator: '@investcalc',
+  },
+  robots: {
+    index: true,
+    follow: true,
+    googleBot: {
+      index: true,
+      follow: true,
+      'max-video-preview': -1,
+      'max-image-preview': 'large',
+      'max-snippet': -1,
+    },
   },
 }
 

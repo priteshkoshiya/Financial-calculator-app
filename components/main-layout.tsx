@@ -28,9 +28,9 @@ export function MainLayout({ children }: { children: React.ReactNode }) {
         />
       )}
 
-      {/* Sidebar - Hidden on mobile by default, shown in md+ */}
+      {/* Sidebar - Fixed on all screen sizes */}
       <div
-        className={`fixed md:static left-0 top-0 z-40 h-screen w-64 transform transition-transform duration-300 ease-in-out md:transform-none ${
+        className={`fixed left-0 top-0 z-40 h-screen w-80 transform transition-transform duration-300 ease-in-out ${
           sidebarOpen ? 'translate-x-0' : '-translate-x-full md:translate-x-0'
         }`}
         onClick={() => setSidebarOpen(false)}
@@ -38,8 +38,8 @@ export function MainLayout({ children }: { children: React.ReactNode }) {
         <Sidebar />
       </div>
 
-      {/* Main Content */}
-      <main className="w-full md:ml-0">
+      {/* Main Content - Added margin-left for desktop to accommodate fixed sidebar */}
+      <main className="w-full md:ml-80">
         <div className="min-h-screen pt-20 md:pt-0">
           {children}
         </div>
