@@ -95,7 +95,7 @@ export default function Home() {
               href="/faq"
               className="px-6 md:px-8 py-3 md:py-4 border-2 border-primary text-primary font-semibold rounded-lg hover:bg-primary/10 transition-colors text-sm md:text-base"
             >
-              Learn More
+              Read FAQs
             </Link>
           </div>
         </div>

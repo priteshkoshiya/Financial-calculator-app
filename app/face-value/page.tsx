@@ -1,95 +1,108 @@
+import type { Metadata } from 'next';
 import { MainLayout } from '@/components/main-layout';
 import { Card } from '@/components/ui/card';
 import { FAQSection } from '@/components/faq-section';
 
-export const metadata = {
-  title: 'Face Value Split & Demerger | Bunny Calculator',
-  description: 'Learn about face value changes, stock splits, and corporate demergers.',
+export const metadata: Metadata = {
+  title: 'Face Value Split & Demerger Guide | Bunny Calculator',
+  description: 'Easily understand complex corporate actions like face value splits, reverse splits, and company demergers. Learn how they affect your stock market investments.',
+  keywords: 'face value of shares, stock demerger explained, face value split, what is face value',
 };
 
 const faqs = [
   {
-    question: 'What is face value (FV)?',
-    answer:
-      'Face value is the nominal value assigned to a stock at the time of issue. It\'s different from market price and is used for accounting purposes.',
+    question: 'How is Face Value different from Market Value?',
+    answer: 'Face Value is an arbitrary, fixed number assigned by the company when it first issues shares (e.g., ₹10). Market Value is the actual price the stock trades at right now on the stock exchange based on supply and demand.'
   },
   {
-    question: 'What happens when face value is split?',
-    answer:
-      'When face value is split (e.g., 1:2), existing shares are divided into multiple shares with proportionally lower face value. Market price adjusts accordingly.',
+    question: 'Does a Face Value split change my total investment amount?',
+    answer: 'No. Just like cutting a pizza into smaller slices, you simply own more shares at a proportionally lower price. Your total amount of money stays exactly the same.'
   },
   {
-    question: 'What is a demerger?',
-    answer:
-      'A demerger (deconsolidation) is when a company separates into two or more independent companies. Shareholders receive shares in both the original and new entities.',
-  },
-  {
-    question: 'How does demerger affect my investment?',
-    answer:
-      'In a demerger, you typically receive shares in the new company. Your total investment value should theoretically remain the same as before, but may change based on market conditions.',
-  },
+    question: 'Why do companies perform a Demerger?',
+    answer: 'Companies demerge to spin-off unrelated business divisions into their own independent companies. This allows each new company to focus squarely on its own industry, often unlocking hidden value for shareholders.'
+  }
 ];
 
 export default function FaceValuePage() {
   return (
     <MainLayout>
       <div className="px-6 py-12">
-        <div className="max-w-4xl mx-auto space-y-12">
+        <div className="max-w-5xl mx-auto space-y-12">
+          {/* Header */}
           <div>
-            <h1 className="text-4xl font-bold text-foreground mb-4">Face Value Split & Demerger</h1>
+            <h1 className="text-4xl font-bold text-foreground mb-4">Understanding Face Value Splits & Demergers</h1>
             <p className="text-lg text-muted-foreground">
-              Understand face value changes and corporate restructuring events.
+              A beginner-friendly guide to making sense of corporate restructuring events and what they mean for your portfolio.
             </p>
           </div>
 
-          <Card className="p-8 bg-primary/10 border border-primary/20">
-            <h2 className="text-2xl font-bold text-foreground mb-4">Understanding Face Value</h2>
-            <p className="text-foreground leading-relaxed">
-              Face value (FV) is the nominal or par value of a stock. It's the amount stated on the stock certificate and is used for accounting purposes. It's different from market price, which fluctuates based on supply, demand, and company performance.
+          <Card className="p-8 bg-card border border-border">
+            <h2 className="text-2xl font-bold text-primary mb-4">What is Face Value (FV)?</h2>
+            <p className="text-foreground leading-relaxed mb-4">
+              When a company is first created, it issues shares to its founders. Each of these original shares is assigned a nominal "Face Value" (often ₹1, ₹2, or ₹10). This number is strictly used for the company's internal accounting and calculating dividends.
+            </p>
+            <p className="text-muted-foreground">
+              <strong>Important:</strong> Dividends are usually announced as a percentage of the Face Value, NOT the market price. For example, a 100% dividend on a stock with a ₹10 Face Value means a ₹10 payout per share.
             </p>
           </Card>
 
           <div className="grid md:grid-cols-2 gap-6">
-            <Card className="p-8 bg-card border border-border">
-              <h2 className="text-2xl font-bold text-primary mb-4">Face Value Split</h2>
-              <p className="text-foreground mb-4 leading-relaxed">
-                A face value split divides existing shares into multiple shares with lower face value. For example, a 1:2 split converts ₹10 FV shares into two ₹5 FV shares.
+            <Card className="p-8 bg-secondary/10 border border-secondary/20 flex flex-col h-full">
+              <h2 className="text-2xl font-bold text-foreground mb-4">Face Value Splits</h2>
+              <p className="text-muted-foreground mb-4 leading-relaxed flex-grow">
+                If a company's stock price becomes too expensive for average investors to buy, the company might split the Face Value.
               </p>
-              <h3 className="font-semibold text-foreground mb-3">Example:</h3>
-              <ul className="space-y-2 text-muted-foreground text-sm">
-                <li>• You own 100 shares with ₹10 FV</li>
-                <li>• After 1:2 split: 200 shares with ₹5 FV</li>
-                <li>• Your total investment value remains the same</li>
-              </ul>
+              <h3 className="font-semibold text-foreground mb-3 border-t border-border pt-4">Example Scenario:</h3>
+              <div className="bg-background border border-border p-4 rounded-lg text-sm text-foreground">
+                <ul className="space-y-2">
+                  <li><strong>Before:</strong> You own 100 shares. FV = ₹10. Market Price = ₹2,000.</li>
+                  <li><strong>The Action:</strong> The company announces a 1-to-2 split.</li>
+                  <li><strong>After:</strong> You now own 200 shares. FV = ₹5. Market Price = ₹1,000.</li>
+                </ul>
+              </div>
             </Card>
 
-            <Card className="p-8 bg-card border border-border">
-              <h2 className="text-2xl font-bold text-primary mb-4">Demerger</h2>
-              <p className="text-foreground mb-4 leading-relaxed">
-                A demerger is a corporate restructuring where a company splits into two or more independent entities. Shareholders receive shares in both companies.
+            <Card className="p-8 bg-secondary/10 border border-secondary/20 flex flex-col h-full">
+              <h2 className="text-2xl font-bold text-foreground mb-4">Company Demergers</h2>
+              <p className="text-muted-foreground mb-4 leading-relaxed flex-grow">
+                A Demerger is when a large conglomerate decides to break up into two or more separate, independent companies.
               </p>
-              <h3 className="font-semibold text-foreground mb-3">Example:</h3>
-              <ul className="space-y-2 text-muted-foreground text-sm">
-                <li>• Company A demerges into Company A and Company B</li>
-                <li>• You receive shares in both companies</li>
-                <li>• Your total ownership is now split between two entities</li>
-              </ul>
+              <h3 className="font-semibold text-foreground mb-3 border-t border-border pt-4">Example Scenario:</h3>
+              <div className="bg-background border border-border p-4 rounded-lg text-sm text-foreground">
+                <ul className="space-y-2">
+                  <li><strong>The Action:</strong> 'MegaCorp' demerges its hotel business into 'MegaHotels'.</li>
+                  <li><strong>The Result:</strong> If you owned MegaCorp shares, you will automatically receive free shares of MegaHotels deposited directly into your account based on an approved ratio.</li>
+                </ul>
+              </div>
             </Card>
           </div>
 
-          <Card className="p-8 bg-secondary/10 border border-secondary/20">
-            <h2 className="text-2xl font-bold text-foreground mb-6">Impact on Investment</h2>
-            <div className="space-y-6">
+          <Card className="p-8 bg-primary/5 border border-primary/20">
+            <h2 className="text-2xl font-bold text-foreground mb-6">How do these events impact you?</h2>
+            <div className="grid sm:grid-cols-2 gap-6">
               <div>
-                <h3 className="font-semibold text-foreground mb-2">Face Value Split Impact</h3>
-                <p className="text-muted-foreground">
-                  Face value split increases liquidity and may make the stock more accessible to retail investors. The proportional ownership and total value remain unchanged.
+                <h3 className="font-bold text-primary mb-2 flex items-center gap-2"><span>✂️</span> Splits Increase Liquidity</h3>
+                <p className="text-sm text-muted-foreground">
+                  Splits make the stock cheaper per share, drawing in more retail investors. While it doesn't change fundamentals, it often causes a short-term psychological price boost.
                 </p>
               </div>
               <div>
-                <h3 className="font-semibold text-foreground mb-2">Demerger Impact</h3>
-                <p className="text-muted-foreground">
-                  Demergers can positively or negatively affect share prices based on the financial health of the separated entities. Shareholders benefit if the demerged entity performs well independently.
+                <h3 className="font-bold text-primary mb-2 flex items-center gap-2"><span>🧩</span> Demergers Unlock Value</h3>
+                <p className="text-sm text-muted-foreground">
+                  Often, the combined market price of the two newly separated companies ends up being higher than the original single parent company, benefiting the shareholder.
+                </p>
+              </div>
+              <div>
+                <h3 className="font-bold text-primary mb-2 flex items-center gap-2"><span>🛡️</span> Mathematical Neutrality</h3>
+                <p className="text-sm text-muted-foreground">
+                  Neither action requires you to pay extra money. They are accounting transformations that automatically update in your brokerage portfolio.
+                </p>
+              </div>
+              <div>
+                <h3 className="font-bold text-primary mb-2 flex items-center gap-2"><span>📊</span> Tax Implications</h3>
+                <p className="text-sm text-muted-foreground">
+                  Receiving demerged shares usually isn't a taxable event initially, but your cost-basis mathematically splits between them for when you eventually sell.
                 </p>
               </div>
             </div>

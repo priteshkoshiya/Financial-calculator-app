@@ -51,7 +51,7 @@ export function Sidebar() {
 
         <div className="my-6 border-t border-sidebar-border" aria-hidden="true"></div>
 
-        <h2 className="px-4 py-2 text-xs font-semibold uppercase text-sidebar-foreground/60" id="calculators-section">Calculators</h2>
+        <h2 className="px-4 py-2 text-xs font-semibold uppercase text-sidebar-foreground/80" id="calculators-section">Calculators</h2>
 
         {calculators.map((calc) => {
           const isActive = pathname === `/${calc.slug}`;
@@ -62,8 +62,8 @@ export function Sidebar() {
               className={cn(
                 'block px-4 py-3 rounded-lg text-sm font-medium transition-all duration-200',
                 isActive
-                  ? 'bg-primary text-primary-foreground'
-                  : 'text-sidebar-foreground hover:bg-sidebar-accent hover:text-sidebar-accent-foreground'
+                  ? 'bg-primary/15 text-primary border-l-4 border-primary rounded-l-none'
+                  : 'text-sidebar-foreground hover:bg-primary/5 hover:text-primary'
               )}
               aria-current={isActive ? 'page' : undefined}
             >
@@ -75,7 +75,7 @@ export function Sidebar() {
 
         <div className="my-6 border-t border-sidebar-border" aria-hidden="true"></div>
 
-        <h2 className="px-4 py-2 text-xs font-semibold uppercase text-sidebar-foreground/60" id="resources-section">Resources</h2>
+        <h2 className="px-4 py-2 text-xs font-semibold uppercase text-sidebar-foreground/80" id="resources-section">Resources</h2>
 
         <Link
           href="/about"
@@ -120,7 +120,7 @@ export function Sidebar() {
         </Link>
       </nav>
 
-      <div className="mt-auto p-3 md:p-4 text-xs text-sidebar-foreground/50 border-t border-sidebar-border">
+      <div className="mt-auto p-3 md:p-4 text-xs text-sidebar-foreground/80 border-t border-sidebar-border">
         <p>© 2026 Bunny Calculator</p>
       </div>
     </aside>

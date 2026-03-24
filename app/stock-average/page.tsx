@@ -1,198 +1,97 @@
-'use client';
-
-import { useState } from 'react';
+import type { Metadata } from 'next';
 import { MainLayout } from '@/components/main-layout';
-import { ResultCard, type ResultItem } from '@/components/result-card';
+import { StockAverageCalculator } from '@/components/stock-average-calculator';
 import { FAQSection } from '@/components/faq-section';
-import { Card } from '@/components/ui/card';
-import { calculateStockAverage } from '@/lib/calculators';
+
+export const metadata: Metadata = {
+  title: 'Stock Average Calculator | Bunny Calculator',
+  description: 'Easily calculate your average stock purchase price when buying the same stock multiple times at different prices. Plan your breakeven points accurately.',
+  keywords: 'stock average calculator, average down calculator, share price average, stock market average',
+};
 
 const faqs = [
   {
-    question: 'How does the Stock Average Calculator work?',
-    answer:
-      'It calculates the average price per share by dividing total investment by total units. If you buy 10 shares at ₹100 and 10 shares at ₹120, your average price is ₹110.',
+    question: 'What does "averaging down" mean in stocks?',
+    answer: 'Averaging down refers to buying more shares of a stock you already own after its price has dropped. This lowers your overall average purchase price, making it easier to break even when the stock goes back up.'
   },
   {
-    question: 'Why is knowing the average price important?',
-    answer:
-      'Your average purchase price helps you set realistic profit targets and break-even points. It\'s crucial for portfolio management and investment strategy.',
+    question: 'How is the average stock price calculated mathematically?',
+    answer: 'It is a weighted average calculation. Formula: (Total amount spent on all purchases) ÷ (Total number of shares owned).'
   },
   {
-    question: 'Can I add multiple purchases?',
-    answer:
-      'Yes! You can enter multiple purchase transactions. The calculator will compute the weighted average across all your purchases.',
-  },
+    question: 'Is it always a good idea to average down?',
+    answer: 'Not always. While it lowers your break-even point, you are also exposing more of your capital to a declining stock. You should only average down if you heavily believe in the company\'s long-term fundamentals.'
+  }
 ];
 
 export default function StockAveragePage() {
-  const [purchases, setPurchases] = useState<Array<{ units: string; price: string }>>([
-    { units: '', price: '' },
-  ]);
-  const [result, setResult] = useState<ReturnType<typeof calculateStockAverage> | null>(null);
-
-  const handleAddPurchase = () => {
-    setPurchases([...purchases, { units: '', price: '' }]);
-  };
-
-  const handleRemovePurchase = (idx: number) => {
-    setPurchases(purchases.filter((_, i) => i !== idx));
-  };
-
-  const handlePurchaseChange = (idx: number, field: string, value: string) => {
-    const updated = [...purchases];
-    updated[idx] = { ...updated[idx], [field]: value };
-    setPurchases(updated);
-  };
-
-  const handleCalculate = () => {
-    const validPurchases = purchases
-      .filter((p) => p.units && p.price)
-      .map((p) => ({
-        units: parseFloat(p.units) || 0,
-        pricePerShare: parseFloat(p.price) || 0,
-      }));
-
-    if (validPurchases.length === 0) return;
-
-    const calculationResult = calculateStockAverage(validPurchases);
-    setResult(calculationResult);
-  };
-
-  const handleClear = () => {
-    setPurchases([{ units: '', price: '' }]);
-    setResult(null);
-  };
-
-  const resultItems: ResultItem[] = result
-    ? [
-        {
-          label: 'Total Units',
-          value: result.totalUnits,
-          suffix: 'shares',
-        },
-        {
-          label: 'Total Cost',
-          value: result.totalCost,
-          suffix: '',
-        },
-        {
-          label: 'Average Price Per Share',
-          value: result.averagePrice,
-          suffix: '',
-          highlight: true,
-        },
-      ]
-    : [];
-
   return (
     <MainLayout>
       <div className="px-6 py-12">
-        <div className="max-w-4xl mx-auto space-y-12">
+        <div className="max-w-5xl mx-auto space-y-12">
+          {/* Header */}
           <div>
             <h1 className="text-4xl font-bold text-foreground mb-4">
               Stock Market Average Calculator
             </h1>
             <p className="text-lg text-muted-foreground">
-              Calculate your average stock purchase price across multiple purchases.
+              Calculate your exact average purchase price and total investment cost after making multiple buys of the same stock.
             </p>
           </div>
 
-          <div className="grid lg:grid-cols-2 gap-8">
-            <Card className="p-8 bg-card border border-border h-fit">
-              <h2 className="text-lg font-bold text-foreground mb-6">Purchase Details</h2>
-              <div className="space-y-4 mb-6">
-                {purchases.map((purchase, idx) => (
-                  <div key={idx} className="space-y-2">
-                    <div className="flex items-end gap-2">
-                      <div className="flex-1">
-                        <label className="block text-sm font-medium text-foreground mb-1">
-                          First Purchase - Units
-                        </label>
-                        <input
-                          type="number"
-                          value={purchase.units}
-                          onChange={(e) =>
-                            handlePurchaseChange(idx, 'units', e.target.value)
-                          }
-                          placeholder="Units"
-                          className="w-full px-3 py-2 border border-input rounded-lg bg-background text-foreground focus:outline-none focus:ring-2 focus:ring-primary"
-                        />
-                      </div>
-                      <div className="flex-1">
-                        <label className="block text-sm font-medium text-foreground mb-1">
-                          Price per share
-                        </label>
-                        <input
-                          type="number"
-                          value={purchase.price}
-                          onChange={(e) =>
-                            handlePurchaseChange(idx, 'price', e.target.value)
-                          }
-                          placeholder="Price"
-                          step="0.01"
-                          className="w-full px-3 py-2 border border-input rounded-lg bg-background text-foreground focus:outline-none focus:ring-2 focus:ring-primary"
-                        />
-                      </div>
-                      {purchases.length > 1 && (
-                        <button
-                          onClick={() => handleRemovePurchase(idx)}
-                          className="px-3 py-2 bg-destructive/10 text-destructive rounded-lg hover:bg-destructive/20 transition-colors"
-                        >
-                          Remove
-                        </button>
-                      )}
-                    </div>
-                  </div>
-                ))}
+          <StockAverageCalculator />
+
+          {/* Educational Content for SEO & User Guide */}
+          <div className="pt-12 border-t border-border">
+            <h2 className="text-2xl font-bold mb-4">How to Use the Stock Average Calculator</h2>
+            <p className="text-muted-foreground mb-4">
+              When you buy shares of a stock multiple times at varying prices, it can be confusing to know exactly what your break-even price is. Our <strong>Stock Average Calculator</strong> instantly figures out your new average cost per share, helping you plan your target selling price.
+            </p>
+
+            <div className="grid md:grid-cols-2 gap-8 mt-8">
+              <div className="bg-secondary/10 p-6 rounded-2xl border border-secondary/20">
+                <h3 className="text-xl font-bold text-foreground mb-4">Step-by-Step Guide</h3>
+                <ol className="space-y-3 text-muted-foreground">
+                  <li><strong>First Purchase:</strong> Enter the number of shares and price per share of your initial buy.</li>
+                  <li><strong>Add More Purchases:</strong> Click "+ Add Another Purchase" for every additional time you bought the stock.</li>
+                  <li><strong>Enter Details:</strong> Input the shares and price for each subsequent buy.</li>
+                  <li><strong>Calculate:</strong> Quickly see your new total average price and the total cost invested.</li>
+                </ol>
               </div>
 
-              <button
-                onClick={handleAddPurchase}
-                className="w-full mb-4 px-4 py-2 border-2 border-primary text-primary font-semibold rounded-lg hover:bg-primary/10 transition-colors"
-              >
-                + Add Another Purchase
-              </button>
-
-              <div className="flex gap-4">
-                <button
-                  onClick={handleCalculate}
-                  className="flex-1 px-6 py-3 bg-primary text-primary-foreground font-semibold rounded-lg hover:opacity-90 transition-opacity"
-                >
-                  Calculate Average
-                </button>
-                <button
-                  onClick={handleClear}
-                  className="flex-1 px-6 py-3 bg-accent text-accent-foreground font-semibold rounded-lg hover:opacity-90 transition-opacity"
-                >
-                  Clear
-                </button>
+              <div className="bg-primary/5 p-6 rounded-2xl border border-primary/10">
+                <h3 className="text-xl font-bold text-foreground mb-4">The Averaging Concept</h3>
+                <p className="text-sm text-muted-foreground mb-3">
+                  The calculator uses a weighted average. The mathematical formula is quite simple:
+                </p>
+                <div className="bg-background border border-border p-4 rounded-lg font-mono text-primary text-sm mb-4 overflow-x-auto text-center">
+                  Avg = Total Investment Cost ÷ Total Shares
+                </div>
+                <ul className="text-sm space-y-2 text-muted-foreground">
+                  <li><strong>Total Cost:</strong> (Units 1 * Price 1) + (Units 2 * Price 2) + ...</li>
+                  <li><strong>Total Shares:</strong> (Units 1 + Units 2 + ...)</li>
+                </ul>
               </div>
-            </Card>
+            </div>
 
-            {result && <ResultCard title="Your Results" results={resultItems} />}
-          </div>
-
-          <div className="bg-secondary/10 p-8 rounded-2xl border border-secondary/20">
-            <h2 className="text-2xl font-bold text-foreground mb-6">How It Works</h2>
-            <ol className="space-y-3 text-foreground">
-              <li className="flex gap-4">
-                <span className="text-primary font-bold flex-shrink-0">1.</span>
-                <span>Enter the units for your first purchase</span>
-              </li>
-              <li className="flex gap-4">
-                <span className="text-primary font-bold flex-shrink-0">2.</span>
-                <span>Enter the price per share for that purchase</span>
-              </li>
-              <li className="flex gap-4">
-                <span className="text-primary font-bold flex-shrink-0">3.</span>
-                <span>Click "Add Another Purchase" for additional buys</span>
-              </li>
-              <li className="flex gap-4">
-                <span className="text-primary font-bold flex-shrink-0">4.</span>
-                <span>Click "Calculate Average" to get your results</span>
-              </li>
-            </ol>
+            <h3 className="text-xl font-bold mt-10 mb-4">Why Calculate Your Stock Average?</h3>
+            <div className="grid sm:grid-cols-3 gap-6 text-sm">
+              <div className="p-4 border border-border rounded-xl">
+                <div className="text-2xl mb-2">🎯</div>
+                <strong className="block text-foreground mb-1">Set Profit Targets</strong>
+                <span className="text-muted-foreground">You must know your exact break-even point before you can accurately set a sell limit order for profit.</span>
+              </div>
+              <div className="p-4 border border-border rounded-xl">
+                <div className="text-2xl mb-2">⚖️</div>
+                <strong className="block text-foreground mb-1">Manage Risk</strong>
+                <span className="text-muted-foreground">See exactly how much capital you have tied up in a single asset to prevent over-exposure.</span>
+              </div>
+              <div className="p-4 border border-border rounded-xl">
+                <div className="text-2xl mb-2">📉</div>
+                <strong className="block text-foreground mb-1">Averaging Down</strong>
+                <span className="text-muted-foreground">Simulate future purchases to see how significantly a lower-priced buy will pull down your average.</span>
+              </div>
+            </div>
           </div>
 
           <FAQSection faqs={faqs} />
