@@ -1,3 +1,4 @@
+import { CorporateActionPreview } from '@/components/corporate-action-preview';
 import type { Metadata } from 'next';
 import { MainLayout } from '@/components/main-layout';
 import { Card } from '@/components/ui/card';
@@ -29,23 +30,27 @@ export default function FaceValuePage() {
     <MainLayout>
       <div className="px-6 py-12">
         <div className="max-w-5xl mx-auto space-y-12">
+          <CorporateActionPreview type="split-demerger" />
+          
           {/* Header */}
-          <div>
-            <h1 className="text-4xl font-bold text-foreground mb-4">Understanding Face Value Splits & Demergers</h1>
-            <p className="text-lg text-muted-foreground">
-              A beginner-friendly guide to making sense of corporate restructuring events and what they mean for your portfolio.
-            </p>
-          </div>
+          <div className="max-w-5xl mx-auto space-y-12">
+            <div className="space-y-4">
+              <h1 className="text-4xl font-bold text-foreground mb-4">Understanding Face Value Splits & Demergers</h1>
+              <p className="text-lg text-muted-foreground">
+                A beginner-friendly guide to making sense of corporate restructuring events and what they mean for your portfolio.
+              </p>
+            </div>
 
-          <Card className="p-8 bg-card border border-border">
-            <h2 className="text-2xl font-bold text-primary mb-4">What is Face Value (FV)?</h2>
-            <p className="text-foreground leading-relaxed mb-4">
-              When a company is first created, it issues shares to its founders. Each of these original shares is assigned a nominal "Face Value" (often ₹1, ₹2, or ₹10). This number is strictly used for the company's internal accounting and calculating dividends.
-            </p>
-            <p className="text-muted-foreground">
-              <strong>Important:</strong> Dividends are usually announced as a percentage of the Face Value, NOT the market price. For example, a 100% dividend on a stock with a ₹10 Face Value means a ₹10 payout per share.
-            </p>
-          </Card>
+            <Card className="p-8 bg-card border border-border">
+              <h2 className="text-2xl font-bold text-primary mb-4">What is Face Value (FV)?</h2>
+              <p className="text-foreground leading-relaxed mb-4">
+                When a company is first created, it issues shares to its founders. Each of these original shares is assigned a nominal "Face Value" (often ₹1, ₹2, or ₹10). This number is strictly used for the company's internal accounting and calculating dividends.
+              </p>
+              <p className="text-muted-foreground">
+                <strong>Important:</strong> Dividends are usually announced as a percentage of the Face Value, NOT the market price. For example, a 100% dividend on a stock with a ₹10 Face Value means a ₹10 payout per share.
+              </p>
+            </Card>
+          </div>
 
           <div className="grid md:grid-cols-2 gap-6">
             <Card className="p-8 bg-secondary/10 border border-secondary/20 flex flex-col h-full">

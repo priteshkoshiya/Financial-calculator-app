@@ -1,5 +1,6 @@
 import type { Metadata } from 'next';
 import { MainLayout } from '@/components/main-layout';
+import { CorporateActionPreview } from '@/components/corporate-action-preview';
 import { Card } from '@/components/ui/card';
 import { FAQSection } from '@/components/faq-section';
 
@@ -29,6 +30,8 @@ export default function BonusBuybackPage() {
     <MainLayout>
       <div className="px-6 py-12">
         <div className="max-w-5xl mx-auto space-y-12">
+          <CorporateActionPreview type="bonus-buyback" />
+          
           <div>
             <h1 className="text-4xl font-bold text-foreground mb-4">Bonus Shares vs. Share Buybacks</h1>
             <p className="text-lg text-muted-foreground">

@@ -2,6 +2,8 @@ import type { Metadata } from 'next';
 import { MainLayout } from '@/components/main-layout';
 import { Card } from '@/components/ui/card';
 
+import { ContactForm } from '@/components/contact-form';
+
 export const metadata: Metadata = {
   title: 'Contact Us | Bunny Calculator Support',
   description: 'Get in touch with the Bunny Calculator team to report bugs, request new financial tools, or ask questions.',
@@ -12,48 +14,17 @@ export default function ContactPage() {
   return (
     <MainLayout>
       <div className="px-6 py-12">
-        <div className="max-w-5xl mx-auto space-y-12">
+        <div className="max-w-3xl mx-auto space-y-12">
           {/* Header */}
-          <div>
-            <h1 className="text-4xl font-bold text-foreground mb-4">Contact Us</h1>
-            <p className="text-lg text-muted-foreground">
-              We're dedicated to improving our tools. Let us know how we can help or how we can do better!
+          <div className="text-center space-y-4">
+            <h1 className="text-4xl font-bold text-foreground">Get in Touch</h1>
+            <p className="text-lg text-muted-foreground mx-auto max-w-2xl">
+              Have a question about a calculator? Found a bug? Or have an idea for a new tool? 
+              Fill out the form below and we'll get back to you!
             </p>
           </div>
 
-          <div className="grid md:grid-cols-2 gap-6">
-            <Card className="p-8 bg-card border border-border flex flex-col items-center text-center">
-              <div className="w-16 h-16 bg-primary/10 text-primary rounded-full flex items-center justify-center text-2xl mb-4">
-                📧
-              </div>
-              <h3 className="text-xl font-bold text-foreground mb-2">Help & Support</h3>
-              <p className="text-muted-foreground mb-4 text-sm">
-                Need help understanding a calculator formula? Or spotted a technical glitch? We've got you covered.
-              </p>
-              <a
-                href="mailto:support@bunnycalculator.com"
-                className="inline-block mt-auto px-6 py-2 bg-primary text-primary-foreground font-semibold rounded-lg hover:opacity-90 transition-opacity"
-              >
-                support@bunnycalculator.com
-              </a>
-            </Card>
-
-            <Card className="p-8 bg-card border border-border flex flex-col items-center text-center">
-              <div className="w-16 h-16 bg-primary/10 text-primary rounded-full flex items-center justify-center text-2xl mb-4">
-                💡
-              </div>
-              <h3 className="text-xl font-bold text-foreground mb-2">Ideas & Feedback</h3>
-              <p className="text-muted-foreground mb-4 text-sm">
-                If you have an idea for a completely new investment tool that we're missing, we'd absolutely love to build it!
-              </p>
-              <a
-                href="mailto:feedback@bunnycalculator.com"
-                className="inline-block mt-auto px-6 py-2 bg-secondary text-secondary-foreground font-semibold rounded-lg hover:opacity-90 transition-opacity border border-secondary/30"
-              >
-                feedback@bunnycalculator.com
-              </a>
-            </Card>
-          </div>
+          <ContactForm />
 
           <Card className="p-8 bg-secondary/5 border border-secondary/20">
             <h2 className="text-2xl font-bold text-foreground mb-6">Before You Email Us</h2>

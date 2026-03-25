@@ -230,8 +230,8 @@ MIT License - Feel free to use this project for personal or commercial purposes.
 ## Support
 
 For issues, suggestions, or feature requests:
-- Email: support@Bunny Calculator.com
-- Feedback: feedback@Bunny Calculator.com
+- Email: priteshgkoshiya@gmail.com
+- Feedback: priteshgkoshiya@gmail.com
 
 ## Disclaimer
 
