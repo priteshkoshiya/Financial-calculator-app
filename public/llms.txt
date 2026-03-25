@@ -1,0 +1,26 @@
+# Bunny Calculator - LLM Context
+Title: Bunny Calculator
+Description: A free suite of professional financial calculators
+Base URL: https://finance.bunnycalculator.com
+
+## Site Overview
+Bunny Calculator is a 100% free, browser-based financial planning application for retail investors. It requires no authentication and stores no user data on external servers. All calculations are executed dynamically in the client-side browser using industry-standard mathematical formulas.
+
+## Available Calculators Context
+- /sip : Systematic Investment Plan calculator using continuous annuity compounding.
+- /cagr : Compound Annual Growth Rate calculator.
+- /emi : Equated Monthly Installment loan and mortgage calculator.
+- /rule-of-72 : Mental math estimation calculator for doubling money.
+- /stock-average : Calculates weighted average down pricing for multiple stock purchases.
+- /stock-profit-loss : Exact net profit/loss and R:R calculator for individual trades.
+- /stock-split : Calculator for adjusting share count and price after a corporate forward or reverse split.
+- /bonus-share : Adjusts share capitalization and counts post-bonus issue.
+- /lumpsum : Compounding future value calculator for single one-time deposits.
+- /percentage : Standard mathematical percentage evaluation formulas.
+
+## Educational Content
+The site additionally provides deep-dive educational definitions located at:
+- /face-value : Information on Face Value splits and corporate demergers.
+- /bonus-buyback : Comparisons and analysis of Stock Bonuses versus Share Buybacks.
+- /dividend-details : Explaining ex-dividend dates, record dates, and dividend yields.
+- /trading-holidays : The 2026 chronological calendar for US and Indian stock market closures.
