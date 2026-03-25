@@ -30,7 +30,6 @@ export default function BonusBuybackPage() {
     <MainLayout>
       <div className="px-6 py-12">
         <div className="max-w-5xl mx-auto space-y-12">
-          <CorporateActionPreview type="bonus-buyback" />
           
           <div>
             <h1 className="text-4xl font-bold text-foreground mb-4">Bonus Shares vs. Share Buybacks</h1>
@@ -38,6 +37,8 @@ export default function BonusBuybackPage() {
               A clear, professional guide breaking down two of the most popular corporate actions and how they uniquely impact your investments.
             </p>
           </div>
+
+          <CorporateActionPreview type="bonus-buyback" />
 
           <div className="grid md:grid-cols-2 gap-6">
             <Card className="p-8 bg-card border border-border flex flex-col h-full">

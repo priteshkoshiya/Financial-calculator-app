@@ -30,7 +30,6 @@ export default function FaceValuePage() {
     <MainLayout>
       <div className="px-6 py-12">
         <div className="max-w-5xl mx-auto space-y-12">
-          <CorporateActionPreview type="split-demerger" />
           
           {/* Header */}
           <div className="max-w-5xl mx-auto space-y-12">
@@ -51,6 +50,9 @@ export default function FaceValuePage() {
               </p>
             </Card>
           </div>
+
+          <CorporateActionPreview type="split-demerger" />
+
 
           <div className="grid md:grid-cols-2 gap-6">
             <Card className="p-8 bg-secondary/10 border border-secondary/20 flex flex-col h-full">

@@ -28,6 +28,7 @@ interface Props {
 
 export function CorporateActionPreview({ type }: Props) {
   const [searchTerm, setSearchTerm] = useState('');
+  const [visibleCount, setVisibleCount] = useState(24);
 
   const allRecords = useMemo(() => {
     // Merge all records into a single array
@@ -51,19 +52,6 @@ export function CorporateActionPreview({ type }: Props) {
       }
       return false;
     });
-  }, [type]);
-
-  const title = useMemo(() => {
-    switch(type) {
-      case 'split-demerger':
-        return "Insights into Face Value Split and Demerger Details in the Indian Equity Market and Bonds";
-      case 'dividend':
-        return "Comprehensive Guide to Latest Stock Dividend Details and Ex-Dates";
-      case 'bonus-buyback':
-        return "Recent Bonus Issues and Share Buyback Details in the Indian Market";
-      default:
-        return "Corporate Actions Details in the Indian Equity Market";
-    }
   }, [type]);
 
   const years = useMemo(() => {
@@ -121,22 +109,14 @@ export function CorporateActionPreview({ type }: Props) {
     } else if (direction === 'prev' && currentIndex > 0) {
       setSelectedYear(years[currentIndex - 1]);
     }
+    setVisibleCount(24); // Reset when year changes
   };
 
   return (
     <div className="py-6 space-y-6">
       {/* Search and Filter Section - Consistent with site controls */}
-      <div className="flex flex-col md:flex-row items-start md:items-end justify-between gap-6 border-b border-border pb-8">
-        <div className="space-y-1">
-          <h2 className="text-4xl font-bold tracking-tight">
-            {title} ({selectedYear})
-          </h2>
-          <p className="text-sm text-muted-foreground">
-            Browse through corporate announcements for the financial year {selectedYear}.
-          </p>
-        </div>
-
-        <div className="flex flex-wrap items-center gap-3">
+      <div className="flex flex-col md:flex-row items-center justify-between gap-6 pb-4">
+        <div className="flex flex-wrap items-center gap-3 w-full md:w-auto">
           <div className="flex items-center gap-1.5 bg-muted/50 p-1 rounded-lg border border-border">
             {years.indexOf(selectedYear) > 0 && (
               <Button
@@ -173,7 +153,10 @@ export function CorporateActionPreview({ type }: Props) {
               type="text"
               placeholder="Filter by symbol..."
               value={searchTerm}
-              onChange={(e) => setSearchTerm(e.target.value)}
+              onChange={(e) => {
+                setSearchTerm(e.target.value);
+                setVisibleCount(24); // Reset pagination on search
+              }}
               className="pl-9 h-10 w-full bg-card shadow-sm rounded-lg"
             />
           </div>
@@ -207,7 +190,7 @@ export function CorporateActionPreview({ type }: Props) {
 
       <div className="max-h-[600px] overflow-y-auto pr-2 custom-scrollbar">
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
-        {yearRecords.map((record, idx) => (
+        {yearRecords.slice(0, visibleCount).map((record, idx) => (
           <article
             key={`${record.SYMBOL}-${idx}`}
             className="bg-card border border-border rounded-xl p-5 shadow-sm space-y-3 relative"
@@ -255,6 +238,18 @@ export function CorporateActionPreview({ type }: Props) {
           </div>
         )}
         </div>
+        
+        {visibleCount < yearRecords.length && (
+          <div className="flex justify-center mt-8 pb-4">
+            <Button 
+              variant="outline" 
+              onClick={() => setVisibleCount(prev => prev + 24)}
+              className="w-full sm:w-auto"
+            >
+              Load More Announcements
+            </Button>
+          </div>
+        )}
       </div>
     </div>
   );

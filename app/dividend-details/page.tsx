@@ -5,9 +5,9 @@ import { Card } from '@/components/ui/card';
 import { FAQSection } from '@/components/faq-section';
 
 export const metadata: Metadata = {
-  title: 'Dividend Details Guide | Bunny Calculator',
-  description: 'A complete beginner\'s guide to understanding stock dividends, calculating dividend yield, and mastering important dividend dates.',
-  keywords: 'what is a dividend, dividend yield formula, ex-dividend date, stock dividend definition',
+  title: 'Dividend, Interest & Bonus Details Guide | Bunny Calculator',
+  description: 'A complete beginner\'s guide to understanding stock dividends, interest payouts, bonus shares, and mastering important ex-dates.',
+  keywords: 'what is a dividend, stock bonus shares, interest payout, dividend yield formula, ex-dividend date',
 };
 
 const faqs = [
@@ -30,14 +30,15 @@ export default function DividendDetailsPage() {
     <MainLayout>
       <div className="px-6 py-12">
         <div className="max-w-5xl mx-auto space-y-12">
-          <CorporateActionPreview type="dividend" />
           
           <div>
-            <h1 className="text-4xl font-bold text-foreground mb-4">The Complete Guide to Dividends</h1>
+            <h1 className="text-4xl font-bold text-foreground mb-4">The Complete Guide to Dividends, Interest & Bonuses</h1>
             <p className="text-lg text-muted-foreground">
-              Learn how corporate dividends work, how to calculate your dividend yields, and the key dates you must know before investing.
+              Learn how corporate dividends work, understand interest payouts and bonus share issues, and track the key dates you must know before investing.
             </p>
           </div>
+
+          <CorporateActionPreview type="dividend" />
 
           <div className="grid md:grid-cols-2 gap-6">
             <Card className="p-8 bg-card border border-border">
@@ -51,20 +52,20 @@ export default function DividendDetailsPage() {
             </Card>
 
             <Card className="p-8 bg-card border border-border">
-              <h2 className="text-2xl font-bold text-primary mb-4">Popular Types of Dividends</h2>
+              <h2 className="text-2xl font-bold text-primary mb-4">What about Interest & Bonuses?</h2>
               <ul className="space-y-4 text-muted-foreground">
                 <li className="flex gap-3 items-start">
-                  <span className="text-xl">💵</span>
+                  <span className="text-xl">💳</span>
                   <div>
-                    <strong className="text-foreground block">Cash Dividends</strong>
-                    The most common form. The company deposits physical cash straight into your brokerage or bank account.
+                    <strong className="text-foreground block">Interest Payouts</strong>
+                    Typically associated with corporate bonds or non-convertible debentures (NCDs), interest is a fixed return paid on your loaned debt.
                   </div>
                 </li>
                 <li className="flex gap-3 items-start">
-                  <span className="text-xl">📈</span>
+                  <span className="text-xl">🎁</span>
                   <div>
-                    <strong className="text-foreground block">Stock Dividends</strong>
-                    Instead of cash, the company issues additional free shares to you.
+                    <strong className="text-foreground block">Bonus Shares</strong>
+                    Free additional shares given to current shareholders. While it increases your total share count, the stock price drops proportionally so the total value remains exactly the same.
                   </div>
                 </li>
               </ul>
