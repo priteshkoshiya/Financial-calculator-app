@@ -63,10 +63,58 @@ const features = [
     description: 'Calculate bonus share distributions',
     slug: 'bonus-share',
   },
+  {
+    icon: '📈',
+    title: 'Compound Interest Calculator',
+    description: 'Calculate compound interest with any compounding frequency',
+    slug: 'compound-interest',
+  },
+  {
+    icon: '🎯',
+    title: 'Savings Goal Calculator',
+    description: 'Find out how much to invest monthly to reach your goal',
+    slug: 'savings-goal',
+  },
+  {
+    icon: '🏖️',
+    title: 'Retirement Planner',
+    description: 'Calculate retirement corpus and monthly savings needed',
+    slug: 'retirement',
+  },
+  {
+    icon: '💹',
+    title: 'Capital Gains Calculator',
+    description: 'Estimate capital gains tax on stocks, property, and more',
+    slug: 'capital-gains',
+  },
+  {
+    icon: '🔬',
+    title: 'XIRR Calculator',
+    description: 'True annualised return for irregular investment cash flows',
+    slug: 'xirr',
+  },
+  {
+    icon: '🏦',
+    title: 'Net Worth Calculator',
+    description: 'Calculate your net worth from assets and liabilities',
+    slug: 'net-worth',
+  },
+  {
+    icon: '📋',
+    title: 'Portfolio Tracker',
+    description: 'Track all holdings with P&L — stored privately in your browser',
+    slug: 'portfolio',
+  },
+  {
+    icon: '⚡',
+    title: 'Compare Investments',
+    description: 'Compare two investment scenarios side by side with a chart',
+    slug: 'compare',
+  },
 ];
 
 const stats = [
-  { number: '15+', label: 'Financial Calculators' },
+  { number: '25+', label: 'Financial Calculators' },
   { number: '100%', label: 'Free & No Registration' },
   { number: '24/7', label: 'Available Anytime' },
   { number: '10K+', label: 'Daily Users' },
@@ -82,7 +130,7 @@ export default function Home() {
             Smart Financial Calculations Made Easy
           </h1>
           <p className="text-base md:text-lg lg:text-xl text-muted-foreground mb-6 md:mb-8 max-w-2xl mx-auto text-pretty">
-            Access 15+ free calculators for stock investing, SIP, SWP, EMI, CAGR, and more. Make informed investment decisions with instant calculations.
+            Access 25+ free calculators for investing, SIP, retirement planning, capital gains, portfolio tracking, and more. Make smarter financial decisions instantly.
           </p>
           <div className="flex flex-col sm:flex-row gap-3 md:gap-4 justify-center">
             <Link

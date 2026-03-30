@@ -274,9 +274,184 @@ export function calculatePercentage(
 ) {
   const result = (amount * percentage) / 100;
   const total = amount + result;
-  
+
   return {
     percentageAmount: Math.round(result * 100) / 100,
     total: Math.round(total * 100) / 100,
+  };
+}
+
+// Compound Interest Calculator
+// Formula: A = P × (1 + r/n)^(n×t)
+// frequency: 1=annually, 2=semiannually, 4=quarterly, 12=monthly, 365=daily
+export function calculateCompoundInterest(
+  principal: number,
+  annualRate: number,
+  years: number,
+  frequency: number
+) {
+  const r = annualRate / 100;
+  const amount = principal * Math.pow(1 + r / frequency, frequency * years);
+  const interest = amount - principal;
+  const effectiveRate = (Math.pow(1 + r / frequency, frequency) - 1) * 100;
+  return {
+    amount: Math.round(amount * 100) / 100,
+    interest: Math.round(interest * 100) / 100,
+    effectiveRate: Math.round(effectiveRate * 100) / 100,
+    principal,
+  };
+}
+
+// Savings Goal Calculator (Reverse SIP / Reverse Lumpsum)
+// Given a target amount, how much to invest per month or as lumpsum?
+export function calculateSavingsGoal(
+  targetAmount: number,
+  annualRate: number,
+  years: number,
+  mode: 'sip' | 'lumpsum'
+) {
+  if (mode === 'lumpsum') {
+    const required = annualRate === 0
+      ? targetAmount
+      : targetAmount / Math.pow(1 + annualRate / 100, years);
+    return {
+      required: Math.round(required * 100) / 100,
+      totalInvested: Math.round(required * 100) / 100,
+      expectedGain: Math.round((targetAmount - required) * 100) / 100,
+    };
+  } else {
+    const months = years * 12;
+    const r = annualRate / 12 / 100;
+    let required = 0;
+    if (r === 0) {
+      required = targetAmount / months;
+    } else {
+      required = (targetAmount * r) / ((Math.pow(1 + r, months) - 1) * (1 + r));
+    }
+    const totalInvested = required * months;
+    return {
+      required: Math.round(required * 100) / 100,
+      totalInvested: Math.round(totalInvested * 100) / 100,
+      expectedGain: Math.round((targetAmount - totalInvested) * 100) / 100,
+    };
+  }
+}
+
+// Retirement Calculator
+// Calculates corpus needed and monthly savings required to retire comfortably
+export function calculateRetirement(
+  currentAge: number,
+  retirementAge: number,
+  monthlyExpense: number,
+  inflationRate: number,
+  returnRate: number,
+  currentSavings: number,
+  lifeExpectancy: number
+) {
+  const yearsToRetire = retirementAge - currentAge;
+  const retirementDuration = lifeExpectancy - retirementAge;
+  const monthlyExpenseAtRetirement = monthlyExpense * Math.pow(1 + inflationRate / 100, yearsToRetire);
+  const monthlyRate = returnRate / 12 / 100;
+  const retirementMonths = retirementDuration * 12;
+  let corpusNeeded = 0;
+  if (monthlyRate === 0) {
+    corpusNeeded = monthlyExpenseAtRetirement * retirementMonths;
+  } else {
+    corpusNeeded = monthlyExpenseAtRetirement * ((1 - Math.pow(1 + monthlyRate, -retirementMonths)) / monthlyRate);
+  }
+  const grownSavings = currentSavings * Math.pow(1 + returnRate / 100, yearsToRetire);
+  const additionalNeeded = Math.max(0, corpusNeeded - grownSavings);
+  const months = yearsToRetire * 12;
+  let monthlySavingsRequired = 0;
+  if (months > 0) {
+    if (monthlyRate === 0) {
+      monthlySavingsRequired = additionalNeeded / months;
+    } else {
+      monthlySavingsRequired = (additionalNeeded * monthlyRate) / ((Math.pow(1 + monthlyRate, months) - 1) * (1 + monthlyRate));
+    }
+  }
+  return {
+    corpusNeeded: Math.round(corpusNeeded * 100) / 100,
+    monthlyExpenseAtRetirement: Math.round(monthlyExpenseAtRetirement * 100) / 100,
+    grownSavings: Math.round(grownSavings * 100) / 100,
+    additionalNeeded: Math.round(additionalNeeded * 100) / 100,
+    monthlySavingsRequired: Math.round(Math.max(0, monthlySavingsRequired) * 100) / 100,
+    yearsToRetire,
+    retirementDuration,
+  };
+}
+
+// Capital Gains Calculator (global — user sets their own tax rates)
+export function calculateCapitalGains(
+  purchasePrice: number,
+  salePrice: number,
+  quantity: number,
+  holdingDays: number,
+  shortTermTaxRate: number,
+  longTermTaxRate: number,
+  longTermThresholdDays: number = 365
+) {
+  const costBasis = purchasePrice * quantity;
+  const saleValue = salePrice * quantity;
+  const gain = saleValue - costBasis;
+  const isLongTerm = holdingDays >= longTermThresholdDays;
+  const taxRate = isLongTerm ? longTermTaxRate : shortTermTaxRate;
+  const taxAmount = gain > 0 ? (gain * taxRate) / 100 : 0;
+  const netGain = gain - taxAmount;
+  const gainPercentage = costBasis === 0 ? 0 : (gain / costBasis) * 100;
+  return {
+    costBasis: Math.round(costBasis * 100) / 100,
+    saleValue: Math.round(saleValue * 100) / 100,
+    gain: Math.round(gain * 100) / 100,
+    gainPercentage: Math.round(gainPercentage * 100) / 100,
+    isLongTerm,
+    taxRate,
+    taxAmount: Math.round(taxAmount * 100) / 100,
+    netGain: Math.round(netGain * 100) / 100,
+  };
+}
+
+// XIRR Calculator — Newton-Raphson method
+// Returns annualised return rate as a percentage
+export function calculateXIRR(
+  cashFlows: { date: Date; amount: number }[],
+  guess: number = 0.1
+): number {
+  if (cashFlows.length < 2) return 0;
+  const t0 = cashFlows[0].date.getTime();
+  const times = cashFlows.map((cf) => (cf.date.getTime() - t0) / (365 * 24 * 60 * 60 * 1000));
+  const amounts = cashFlows.map((cf) => cf.amount);
+  let rate = guess;
+  for (let iter = 0; iter < 200; iter++) {
+    let f = 0;
+    let df = 0;
+    for (let i = 0; i < amounts.length; i++) {
+      const factor = Math.pow(1 + rate, times[i]);
+      f += amounts[i] / factor;
+      df -= times[i] * amounts[i] / (factor * (1 + rate));
+    }
+    if (Math.abs(df) < 1e-10) break;
+    const newRate = rate - f / df;
+    if (Math.abs(newRate - rate) < 1e-7) { rate = newRate; break; }
+    rate = newRate;
+    if (rate <= -1) { rate = -0.999; }
+  }
+  return Math.round(rate * 10000) / 100;
+}
+
+// Net Worth Calculator
+export function calculateNetWorth(
+  assets: { name: string; value: number }[],
+  liabilities: { name: string; value: number }[]
+) {
+  const totalAssets = assets.reduce((sum, a) => sum + a.value, 0);
+  const totalLiabilities = liabilities.reduce((sum, l) => sum + l.value, 0);
+  const netWorth = totalAssets - totalLiabilities;
+  const debtToAssetRatio = totalAssets === 0 ? 0 : (totalLiabilities / totalAssets) * 100;
+  return {
+    totalAssets: Math.round(totalAssets * 100) / 100,
+    totalLiabilities: Math.round(totalLiabilities * 100) / 100,
+    netWorth: Math.round(netWorth * 100) / 100,
+    debtToAssetRatio: Math.round(debtToAssetRatio * 100) / 100,
   };
 }
