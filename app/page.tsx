@@ -4,11 +4,11 @@ import { MainLayout } from '@/components/main-layout';
 import { Card } from '@/components/ui/card';
 
 export const metadata: Metadata = {
-  title: 'Bunny Calculator | Free Financial Calculators for Smart Investing',
+  title: 'Finance Calculators | Free Smart Tools for Investing',
   description: 'Discover 15+ free financial calculators for stock investing, SIP, SWP, EMI, CAGR and more. Calculate profits, losses, and investment returns instantly.',
   keywords: 'stock calculator, investment calculator, SIP calculator, SWP calculator, EMI calculator, CAGR calculator, financial calculators',
   openGraph: {
-    title: 'Bunny Calculator | Free Financial Calculators',
+    title: 'Finance Calculators | Free Smart Tools',
     description: 'Free online financial calculators for smart investing',
     type: 'website',
   },
@@ -192,7 +192,7 @@ export default function Home() {
       <section className="px-4 md:px-6 py-12 md:py-16 bg-secondary/10">
         <div className="max-w-5xl mx-auto">
           <h2 className="text-2xl md:text-3xl font-bold text-foreground mb-8 md:mb-12 text-center">
-            Why Choose Bunny Calculator?
+            Why Choose Finance Calculators?
           </h2>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-4 md:gap-8">
             <Card className="p-6 md:p-8 border border-border bg-card">

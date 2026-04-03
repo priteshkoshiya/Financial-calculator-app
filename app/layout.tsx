@@ -1,4 +1,4 @@
-import type { Metadata } from 'next'
+import type { Metadata, Viewport } from 'next'
 import { Geist, Geist_Mono } from 'next/font/google'
 import { Analytics } from '@vercel/analytics/next'
 import { Toaster } from '@/components/ui/sonner'
@@ -8,28 +8,40 @@ import './globals.css'
 const _geist = Geist({ subsets: ["latin"] });
 const _geistMono = Geist_Mono({ subsets: ["latin"] });
 
+export const viewport: Viewport = {
+  themeColor: [
+    { media: '(prefers-color-scheme: light)', color: '#ffffff' },
+    { media: '(prefers-color-scheme: dark)', color: '#000000' },
+  ],
+  width: 'device-width',
+  initialScale: 1,
+  maximumScale: 1,
+  userScalable: false,
+};
+
 export const metadata: Metadata = {
   metadataBase: new URL('https://finance.bunnycalculator.com'),
-  title: 'Bunny Calculator | Financial Calculators for Smart Investing',
+  title: 'Finance Calculators | Smart Tools for Investing',
   description: 'Free online financial calculators for stock investing, SIP, SWP, EMI, CAGR, and more. Calculate profits, losses, and investment returns instantly.',
-  generator: 'Bunny Calculator',
+  generator: 'Finance Calculators',
+  manifest: '/manifest.json',
+  appleWebApp: {
+    capable: true,
+    statusBarStyle: 'default',
+    title: 'Finance Calc',
+  },
+  formatDetection: {
+    telephone: false,
+  },
   keywords: 'stock calculator, SIP calculator, SWP calculator, EMI calculator, CAGR calculator, investment calculator',
   icons: {
     icon: [
-      {
-        url: '/icon-light-32x32.png',
-        media: '(prefers-color-scheme: light)',
-      },
-      {
-        url: '/icon-dark-32x32.png',
-        media: '(prefers-color-scheme: dark)',
-      },
-      {
-        url: '/icon.svg',
-        type: 'image/svg+xml',
-      },
+      { url: '/icon-192x192.png', sizes: '192x192', type: 'image/png' },
+      { url: '/icon-512x512.png', sizes: '512x512', type: 'image/png' },
     ],
-    apple: '/apple-icon.png',
+    apple: [
+      { url: '/icon-512x512.png', sizes: '512x512', type: 'image/png' },
+    ],
   },
   openGraph: {
     title: 'Bunny Calculator | Financial Calculators for Smart Investing',
@@ -41,9 +53,9 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Bunny Calculator | Free Financial Calculators',
+    title: 'Finance Calculators | Free Smart Tools',
     description: 'Free online financial calculators for smart investing',
-    creator: '@Bunny Calculator',
+    creator: '@Finance Calculators',
   },
   robots: {
     index: true,
@@ -61,7 +73,7 @@ export const metadata: Metadata = {
 const jsonLd = {
   '@context': 'https://schema.org',
   '@type': 'WebApplication',
-  name: 'Bunny Calculator',
+  name: 'Finance Calculators',
   url: 'https://finance.bunnycalculator.com',
   description: 'Free financial calculators for investing, retirement planning, capital gains, portfolio tracking, SIP, SWP, EMI, CAGR, and more.',
   applicationCategory: 'FinanceApplication',

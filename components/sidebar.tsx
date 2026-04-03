@@ -34,6 +34,7 @@ const planningCalcs = [
 const tools = [
   { name: 'Portfolio Tracker', slug: 'portfolio', icon: '📋' },
   { name: 'Compare Investments', slug: 'compare', icon: '⚡' },
+  { name: 'Amazon Label Extractor', slug: 'amazon-label-extractor', icon: '🏷️' },
 ];
 
 const marketData = [
@@ -76,11 +77,11 @@ export function Sidebar() {
   const { resolvedTheme, setTheme } = useTheme();
 
   return (
-    <aside className="h-screen w-80 overflow-y-auto border-r border-border bg-sidebar flex flex-col" aria-label="Main navigation">
+    <aside className="h-screen w-80 overflow-y-auto sidebar-scrollbar border-r border-border bg-sidebar flex flex-col" aria-label="Main navigation">
       <div className="p-4 md:p-6">
-        <Link href="/" className="flex items-center gap-2 font-bold text-lg text-primary hover:opacity-80 transition-opacity" aria-label="Bunny Calculator - Home">
+        <Link href="/" className="flex items-center gap-2 font-bold text-lg text-primary hover:opacity-80 transition-opacity" aria-label="Finance Calculators - Home">
           <span className="text-2xl" aria-hidden="true">📊</span>
-          <span className="hidden sm:inline">Bunny Calculator</span>
+          <span className="hidden sm:inline">Finance Calculators</span>
         </Link>
       </div>
 
@@ -140,7 +141,7 @@ export function Sidebar() {
       </nav>
 
       <div className="mt-auto p-3 md:p-4 border-t border-sidebar-border flex items-center justify-between">
-        <p className="text-xs text-sidebar-foreground/60">© 2026 Bunny Calculator</p>
+        <p className="text-xs text-sidebar-foreground/60">© 2026 Finance Calculators</p>
         <button
           onClick={() => setTheme(resolvedTheme === 'dark' ? 'light' : 'dark')}
           aria-label="Toggle dark mode"
