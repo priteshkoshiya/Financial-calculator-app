@@ -2,6 +2,8 @@ import type { Metadata } from 'next';
 import Link from 'next/link';
 import { MainLayout } from '@/components/main-layout';
 import { Card } from '@/components/ui/card';
+import { AppDownloadSection } from '@/components/app-download-section';
+import { HeroActions } from '@/components/hero-actions';
 
 export const metadata: Metadata = {
   title: 'Finance Calculators | Free Smart Tools for Investing',
@@ -132,20 +134,7 @@ export default function Home() {
           <p className="text-base md:text-lg lg:text-xl text-muted-foreground mb-6 md:mb-8 max-w-2xl mx-auto text-pretty">
             Access 25+ free calculators for investing, SIP, retirement planning, capital gains, portfolio tracking, and more. Make smarter financial decisions instantly.
           </p>
-          <div className="flex flex-col sm:flex-row gap-3 md:gap-4 justify-center">
-            <Link
-              href="/stock-profit-loss"
-              className="px-6 md:px-8 py-3 md:py-4 bg-primary text-primary-foreground font-semibold rounded-lg hover:opacity-90 transition-opacity text-sm md:text-base"
-            >
-              Get Started →
-            </Link>
-            <Link
-              href="/faq"
-              className="px-6 md:px-8 py-3 md:py-4 border-2 border-primary text-primary font-semibold rounded-lg hover:bg-primary/10 transition-colors text-sm md:text-base"
-            >
-              Read FAQs
-            </Link>
-          </div>
+          <HeroActions />
         </div>
       </section>
 
@@ -220,6 +209,9 @@ export default function Home() {
         </div>
       </section>
 
+      {/* App Download Section */}
+      <AppDownloadSection />
+
       {/* CTA Section */}
       <section className="px-4 md:px-6 py-12 md:py-16">
         <div className="max-w-2xl mx-auto text-center bg-primary/10 p-6 md:p-12 rounded-2xl border border-primary/20">
@@ -231,7 +223,7 @@ export default function Home() {
           </p>
           <Link
             href="/stock-profit-loss"
-            className="inline-block px-6 md:px-8 py-3 md:py-4 bg-primary text-primary-foreground font-semibold rounded-lg hover:opacity-90 transition-opacity text-sm md:text-base"
+            className="inline-block px-6 md:px-8 py-3 md:py-4 bg-primary text-primary-foreground font-semibold rounded-xl hover:shadow-lg hover:shadow-primary/20 transition-all text-sm md:text-base"
           >
             Go to Stock Profit/Loss Calculator →
           </Link>

@@ -4,6 +4,7 @@ import Link from 'next/link';
 import { usePathname } from 'next/navigation';
 import { useTheme } from 'next-themes';
 import { cn } from '@/lib/utils';
+import { InstallPWA } from './install-pwa';
 
 const investmentCalcs = [
   { name: 'SIP Calculator', slug: 'sip', icon: '💰' },
@@ -139,6 +140,11 @@ export function Sidebar() {
           </Link>
         ))}
       </nav>
+
+
+      <div className="mt-4 px-4 pb-6 border-t border-sidebar-border pt-4">
+        <InstallPWA />
+      </div>
 
       <div className="mt-auto p-3 md:p-4 border-t border-sidebar-border flex items-center justify-between">
         <p className="text-xs text-sidebar-foreground/60">© 2026 Finance Calculators</p>
